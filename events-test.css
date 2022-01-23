@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  border: 5px solid red;
+  min-height: -webkit-fill-available;
+}
+
+body {
+  border: 5px solid green;
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+}
