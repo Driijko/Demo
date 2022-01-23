@@ -1,0 +1,525 @@
+/* GENERAL //////////////////////////////////////////// */
+.pic-background {
+    position: absolute;
+    background-image: url("./assets/images/project-team.jpg");
+    height: 80vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+i {
+    position: fixed;
+    text-align: left;
+    top: 30px;
+    right: 50px;
+    color: white;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+
+.team-section {
+    height: 100vh;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    font-size: 3vw;
+    font-size: clamp(3rem, 0.3333rem + 4.1667vw, 7rem);
+    font-family: "Roboto Condensed";
+}
+
+/* NAV SECTION ///////////////////////////////////////////////// */
+#nav-section {
+    height: 80vh;
+    font-family: "Roboto Condensed";
+}
+
+h2 {
+    height: 20vh;
+    font-size: 3vw;
+    font-size: clamp(4rem, 1.6667rem + 3.6458vw, 7.5rem);
+    font-family: "Roboto Condensed";
+    color: black;
+    padding-left: 3vw;
+}
+
+#in-page-nav ul{
+    margin-top: 2vh;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    font-family: "Roboto Condensed";
+}
+
+#in-page-nav a {
+    width: 100vw;
+    background-color: hsla(50, 100%, 0%, 0.9);
+    color: hsl(50, 100%, 90%);
+    font-size: 2vw;
+    font-size: clamp(1.5rem, 0.1667rem + 2.0833vw, 3.5rem);
+    display: inline-block;
+    transition: background-color 2s, color 2s;
+    box-sizing: border-box;
+}
+
+#in-page-nav a:hover, #in-page-nav a:focus {
+    background-color: hsla(50, 100%, 90%, 0.8);
+    color: red;
+}
+
+#nav1 {
+    padding-left: 9vw;
+}
+
+#nav2 {
+    padding-left: 43vw;
+}
+
+#nav3 {
+    padding-left: 80vw;
+}
+
+
+/* PARTNERS SECTION /////////////////////////////////////////////// */
+#partners h3 {
+    margin-bottom: 5vh;
+}
+
+#partners-list a {
+    display: flex;
+    height: 60vh;
+    padding-bottom: 10vh;
+}
+
+/* #myseum a {
+    height: 40vh;
+}
+
+#myseum .logo-and-text{
+    width: 100%;
+}
+
+#myseum .logo {
+    padding: 3vw;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+} */
+
+.just-logo a {
+  height: 40vh;
+}
+
+.just-logo .logo-and-text {
+  width: 100%;
+}
+
+.just-logo .logo {
+  padding: 3vw;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+#venue p {
+  font-size: clamp(2rem, 0.6667rem + 2.0833vw, 4rem); 
+  text-align: center;
+}
+
+#venue .logo {
+  padding-bottom: 15vh;
+}
+
+.logo-and-text {
+    display: flex;
+    flex-direction: column;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    transition: background-color 2s;
+}
+
+.logo-and-text:hover, .logo-and-text:focus {
+    background-color: hsla(0, 0%, 0%, 0.8);
+}
+
+.logo {
+    height: 15vh;
+    object-fit: contain;
+    margin-bottom: 5vh;
+}
+
+.logo-and-text h4 {
+    font-size: 3vw;
+    font-size: clamp(2rem, 0.6667rem + 2.0833vw, 4rem);
+    padding-left: 2vw;
+    text-decoration: underline;
+    font-family: "Roboto Condensed";
+    margin-bottom: 2vh;
+}
+
+.logo-and-text p {
+    padding: 0 5vw 0 2vw;
+    font-size: 1.5vw;
+    font-size: clamp(1.2rem, 0.4667rem + 1.1458vw, 2.3rem);
+    line-height: 2.5ex;
+}
+
+.partner-image {
+    object-fit: cover;
+    width: 30vw;
+}
+
+/* CURATORS SECTION //////////////////////////////////////////// */
+
+#curators ul {
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#curators ul li {
+    width: 44vw;
+    height: 80vh;
+    background-color: hsla(0, 0%, 0%, 0.5);
+}
+
+#curators .pic-and-name {
+    height: 40%;
+    display: flex;
+} 
+
+#curators ul img {
+    display: block;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#curators ul h4 {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 3vw;
+    font-size: clamp(3rem, 0.3333rem + 4.1667vw, 7rem);
+    font-family: "Roboto Condensed";
+}
+
+#curators p {
+    font-size: 1vw;
+    font-size: clamp(1rem, 0.3333rem + 1.0417vw, 2rem);
+    background-color: hsla(0, 0%, 0%, 0.5);
+    /* border-radius: 50px; */
+    padding: 0 4vw 5% 4vw;
+    line-height: 2.5ex;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider {
+    height: 20vh;
+}
+
+/* WEB DESIGN SECTION ///////////////////////////////////////// */
+#web-design {
+    position: relative;
+    background-color:hsl(50, 100%, 0%);
+    color: hsl(50, 100%, 90%);
+}
+
+#web-design h3 {
+    font-family: "MuseoModerno", cursive;
+    font-size: clamp(3rem, 0.3333rem + 4.1667vw, 7rem);
+    height: 70vh;
+}
+
+.art {
+    box-sizing: border-box;
+    border: 5px solid hsla(0, 0%, 0%, 0);
+    width: 26vw;
+    position: absolute;
+    top: 3%;
+    left: 37%;
+    opacity: 0.2;
+    transition: opacity 2s;
+}
+
+.art:hover {
+    opacity: 0.5;
+    border: 5px dotted white;
+    cursor: pointer;
+}
+
+#dreeko {
+    height: 80vh;
+    margin-bottom: 10vh;
+    font-family: "Montserrat Alternates", sans-serif;
+    border-top: 1px solid hsl(220, 100%, 30%);
+    border-bottom: 1px solid hsl(220, 100%, 30%);
+    padding-top: 5vh;
+    background-color: hsl(220, 100%, 5%);
+}
+
+#dreeko img {
+    object-fit: contain;
+    width: 100%;
+    height: 20vh;
+    margin-bottom: 20vh
+}
+
+#dreeko #text-section {
+    font-size: 2vw;
+    font-size: clamp(1.5rem, 0.5000rem + 1.5625vw, 3rem);
+    text-align: center;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: black;
+}
+
+#dreeko div a {
+    padding-left: 1vw;
+}
+
+#web-design-list {
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(1.5rem, 1.1667rem + 0.5208vw, 2rem);
+}
+
+#web-design h4 {
+    font-size: 2vw;
+    font-size: clamp(3rem, 1.6667rem + 2.0833vw, 5rem);
+    padding: 1vw;
+    background-color: hsl(220, 100%, 10%);
+    font-family: "MuseoModerno";
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+#web-design ul {
+    display: flex;
+}
+
+#web-design li {
+    margin-bottom: 10vh;
+}
+
+#fonts {
+    height: 30vh;
+}
+
+#fonts li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    font-size: clamp(2rem, 0.6667rem + 2.0833vw, 4rem);
+    width: 33%;
+    height: 20vh;
+}
+
+#coolvetica {
+    font-family: "Coolvetica-Regular";
+}
+
+#roboto {
+    font-family: "Roboto Condensed";
+}
+
+.image-text-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-text-container img {
+    object-fit: contain;
+    height: 20vh;
+    padding: 1vw;
+}
+
+.image-text-container p {
+    display: flex;
+    align-items: center;
+    height: 20vh;
+    padding-left: 5vw;
+    font-size: 1vw;
+    font-size: clamp(1.5rem, 0.5000rem + 1.5625vw, 3rem);
+}
+
+.image-text-container span {
+    display: inline-block;
+    margin-right: 1vw;
+    font-style: italic;
+}
+
+
+/* PHONE VERSION ///////////////////////////////////// */
+@media screen and (max-width: 1024px) {
+
+    /* GENERAL ////////////////////////////////////////// */
+    h3 {
+        text-align: center;
+        font-size: clamp(2.5rem, 1.3636rem + 5.6818vw, 5rem);
+    }
+
+    #icon {
+        font-size: 3vw;
+    }
+
+    i {
+        top: 92%;
+        right: 45%;
+        border: 1vw solid hsla(0, 0%, 0%, 0.3);
+        color: hsla(0, 0%, 0%, 0.3);
+        padding: 5px;
+    } 
+
+    .team-section {
+        height: auto;
+    }
+    
+
+    /* NAV SECTION ////////////////////////////////////////// */
+    #nav-section .pic-background {
+        background-size: cover;
+        background-position: 50%;
+    }
+
+    h2 {
+        padding: 2vh 0 0 40vw;
+        font-size: clamp(1.8rem, -0.1091rem + 9.5455vw, 6rem);
+    }
+
+    #in-page-nav a {
+        font-size: clamp(1.5rem, 0.8182rem + 3.4091vw, 3rem);
+    }
+
+    #in-page-nav ul {
+        height: 40vh;
+    }
+
+    #nav3 {
+        padding-left: 60vw;
+    }
+
+    /* PARTNERS SECTION /////////////////////////////////// */
+
+    #partners-list a {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #venue .logo {
+      padding-bottom: 0;
+    }
+
+    .logo {
+        height: 30vh;
+    }
+
+    .logo-and-text h4 {
+        font-size: clamp(2rem, 1.0909rem + 4.5455vw, 4rem);
+        text-align: center;
+    }
+
+    .logo-and-text p {
+        font-size: clamp(1rem, 0.4091rem + 2.9545vw, 2.3rem);
+        padding: 3vh 5vw 5vh 5vw;
+    }
+
+    .partner-image {
+        width: 100%;
+    }
+
+    /* CURATORS SECTION //////////////////////////////////// */
+    #curators ul {
+        height: 180vh;
+        flex-direction: column;
+    }
+
+    #curators ul li {
+        width: 100%;
+        height: 90vh;
+    }
+
+    #curators .pic-and-name {
+        height: 30%;
+    }
+
+    #curators ul h4 {
+        font-size: clamp(2.5rem, 1.3636rem + 5.6818vw, 5rem);
+    }
+
+    #curators p {
+        font-size: clamp(0.8rem, 0.0273rem + 3.8636vw, 2.5rem);
+    }
+
+    /* WEB-DESIGN SECTION/////////////////////////////////////// */
+    #web-design h3 {
+        font-size: clamp(2rem, 0.6364rem + 6.8182vw, 5rem);
+    }
+
+    .art {
+        width: 50vw;
+        top: 3.5%;
+        left: 25%;
+    }
+
+    #dreeko #text-section {
+        padding: 0 3vw;
+        font-size: clamp(1rem, 0.0909rem + 4.5455vw, 3rem);
+    }
+
+    #web-design-list {
+        font-size: clamp(1rem, -0.7778rem + 8.8889vw, 2rem);
+    }
+
+    #web-design h4 {
+        font-size: clamp(2rem, 0.6364rem + 6.8182vw, 5rem);
+    }
+
+    #web-design ul {
+        flex-direction: column;
+    }
+
+    #web-design li {
+        margin: 0;
+    }
+
+    #fonts {
+        height: 80vh;
+    }
+
+    #fonts li {
+        font-size: clamp(1.5rem, 0.3636rem + 5.6818vw, 4rem);
+        width: 100%;
+    }
+
+    .image-text-container {
+        flex-direction: column;
+    }
+
+    .image-text-container p {
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 3vw;
+        font-size: clamp(0.8rem, -0.2000rem + 5.0000vw, 3rem);
+    }
+}
