@@ -82,11 +82,14 @@ body {
   height: 100%;
 }
 
+#fixed-layer .ur {
+  top: var(--gh);
+}
+
 #gutter1, #gutter2 {
   position: absolute;
   height: var(--gh);
   width: 100%;
-  border: 5px solid red;
 }
 
 #gutter1 {
@@ -110,6 +113,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  scroll-snap-align: start;
 }
 
 .ur {
@@ -117,6 +121,5 @@ body {
   width: var(--w);
   height: var(--h);
   border: 5px solid green;
-  top: var(--gh);
 }
 
