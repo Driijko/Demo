@@ -57,14 +57,21 @@ a:focus {
 }
 
 :root {
-  height: 100vh; /*Fallback for browsers that do not support Custom Properties*/
-  height: calc(var(--vh, 1vh) * 100);
+  /* height: 100vh;  */
+  /* height: calc(var(--vh, 1vh) * 100); */
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-  --w: 100vw;
+  /* --w: 100vw;
   --h: calc(var(--w) * 1.777);
-  --gh: calc((100vh - var(--h))/2);
+  --gh: calc((100vh - var(--h))/2); */
+  /* --ratio: calc(100vw / 100vh); */
+  border: 5px solid red;
+  height: 100%;
 }
+
+/* #test {
+  width: var(--ratio);
+} */
 
 /* Chrome and Safari */
 ::-webkit-scrollbar {
@@ -108,8 +115,8 @@ body {
 }
 
 .vp {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,5 +128,25 @@ body {
   width: var(--w);
   height: var(--h);
   border: 5px solid green;
+}
+
+.abs {
+  position: absolute;
+}
+
+.c2 {
+  width: 100vw;
+  height: 200vh;
+  scroll-snap-type: y mandatory;
+}
+
+.c3 {
+  width: 100vw;
+  height: 300vh;
+  scroll-snap-type: y mandatory;
+}
+
+.d {
+  display: none;
 }
 
