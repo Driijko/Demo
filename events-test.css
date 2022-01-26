@@ -60,8 +60,8 @@ a:focus {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
   /* --h: calc(var(--w) * 1.777); */
-  --w: 100vw;
-  --h: calc(100vw * 1.777);
+  /* --w: 100vw;
+  --h: calc(100vw * 1.777); */
   height: 100%;
   overflow: hidden;
 }
