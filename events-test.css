@@ -64,6 +64,7 @@ a:focus {
   height: 100%;
   overflow: hidden;
   overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
 }
 
 /* Chrome and Safari */
