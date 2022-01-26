@@ -129,8 +129,15 @@ body {
   width: var(--w);
   height: var(--h);
   /* border: 5px solid red; */
-  background-color: red;
   font-size: 50px;
+}
+
+#color1 {
+  background-color: purple;
+}
+
+#color2 {
+  background-color: yellow;
 }
 
 .abs {
