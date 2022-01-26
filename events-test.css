@@ -63,6 +63,7 @@ a:focus {
   --w: 100vw;
   --h: calc(100vw * 1.777);
   height: 100%;
+  overflow: hidden;
 }
 
 /* Chrome and Safari */
@@ -73,6 +74,12 @@ a:focus {
 body {
   width: 100%;
   height: 100%;
+  position: fixed;
+  /* prevent overscroll bounce*/
+  /* background-color: lightgreen; */
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  /* iOS velocity scrolling */
 }
 
 #fixed-layer {
