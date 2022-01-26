@@ -59,7 +59,7 @@ a:focus {
 :root {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-  --h: calc(var(--w) * 1.777);
+  /* --h: calc(var(--w) * 1.777); */
   height: 100%;
 }
 
