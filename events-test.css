@@ -58,7 +58,6 @@ a:focus {
 
 :root {
   -ms-overflow-style: none;  /* IE and Edge */
-  /* scrollbar-width: none;   */
   /* --h: calc(var(--w) * 1.777); */
   /* --w: 100vw;
   --h: calc(100vw * 1.777); */
@@ -73,7 +72,6 @@ a:focus {
 }
 
 body {
-  /* scrollbar-width: none;  */
   width: 100%;
   height: 100%;
   position: fixed;
@@ -113,7 +111,6 @@ body {
 }
 
 #msc {
-  /* scrollbar-width: none;   */
   position: absolute;
   top: 0;
   width: 100%;
