@@ -64,6 +64,7 @@ a:focus {
   --h: calc(100vw * 1.777); */
   height: 100%;
   overflow: hidden;
+  overflow: -moz-scrollbars-none;
 }
 
 /* Chrome and Safari */
