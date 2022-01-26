@@ -64,7 +64,7 @@ a:focus {
   height: 100%;
   overflow: hidden;
   overflow: -moz-scrollbars-none;
-  scrollbar-width: none;
+  /* scrollbar-width: none; */
 }
 
 /* Chrome and Safari */
@@ -81,7 +81,7 @@ body {
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
   /* iOS velocity scrolling */
-  scrollbar-width: none;
+  /* scrollbar-width: none; */
 }
 
 #fixed-layer {
@@ -119,7 +119,7 @@ body {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  /* scrollbar-width: none; */
+  scrollbar-width: none;
 }
 
 .vp {
