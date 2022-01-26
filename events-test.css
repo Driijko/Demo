@@ -95,12 +95,12 @@ body {
 }
 
 #gutter1 {
-  left: 0;
-  top: 0;
+  left: 1px;
+  top: 1px;
 }
 
 #gutter2 {
-  right: 0;
+  right: 1px;
   /* bottom: 0; */
   bottom: 1px;
 }
