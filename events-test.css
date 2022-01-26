@@ -95,14 +95,14 @@ body {
 }
 
 #gutter1 {
-  left: 1px;
-  top: 1px;
+  left: 0;
+  top: 0;
 }
 
 #gutter2 {
-  right: 1px;
+  right: 0;
   /* bottom: 0; */
-  bottom: 1px;
+  bottom: 0;
 }
 
 #msc {
