@@ -57,14 +57,10 @@ a:focus {
 }
 
 :root {
-  -ms-overflow-style: none;  /* IE and Edge */
-  /* --h: calc(var(--w) * 1.777); */
-  /* --w: 100vw;
-  --h: calc(100vw * 1.777); */
   height: 100%;
+  -ms-overflow-style: none;
   overflow: hidden;
-  overflow: -moz-scrollbars-none;
-  /* scrollbar-width: none; */
+  overflow: -moz-scrollbars-none; 
 }
 
 /* Chrome and Safari */
@@ -75,13 +71,10 @@ a:focus {
 body {
   width: 100%;
   height: 100%;
+  /* Prevent address bar from disappearing on mobile. */
   position: fixed;
-  /* prevent overscroll bounce*/
-  /* background-color: lightgreen; */
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
-  /* iOS velocity scrolling */
-  /* scrollbar-width: none; */
 }
 
 #fixed-layer {
@@ -91,7 +84,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
 }
 
 #gutter1, #gutter2 {
@@ -129,14 +121,13 @@ body {
   justify-content: center;
   align-items: center;
   scroll-snap-align: start;
-  border: 5px solid green;
 }
 
 .ur {
   position: relative;
   width: var(--w);
   height: var(--h);
-  border: 5px solid red;
+  background-color: red;
   color: white;
   font-size: 50px;
 }
