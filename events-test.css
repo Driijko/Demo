@@ -88,6 +88,7 @@ body {
   position: absolute;
   width: var(--gw);
   height: var(--gh);
+  background-color: blue;
 }
 
 #gutter1 {
@@ -129,15 +130,15 @@ body {
   font-size: 50px;
 }
 
-/* .abs {
+.abs {
   position: absolute;
-} */
+}
 
-/* .c2 {
+.c2 {
   width: 100vw;
   height: 200vh;
   scroll-snap-type: y mandatory;
-} */
+}
 
 /* .c3 {
   width: 100vw;
@@ -149,3 +150,8 @@ body {
   display: none;
 } */
 
+@media only screen and (min-width: 1025px) {
+  :root {
+    --h: 100vh;
+  }
+}
