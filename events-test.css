@@ -81,6 +81,7 @@ body {
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
   /* iOS velocity scrolling */
+  scrollbar-width: none;
 }
 
 #fixed-layer {
@@ -119,6 +120,7 @@ body {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 .vp {
