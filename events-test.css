@@ -90,7 +90,7 @@ body {
   position: absolute;
   width: var(--gw);
   height: var(--gh);
-  background-color: blue;
+  border: 5px solid blue;
 }
 
 #gutter1 {
@@ -127,8 +127,7 @@ body {
   position: relative;
   width: var(--w);
   height: var(--h);
-  background-color: red;
-  color: white;
+  border: 5px solid red;
   font-size: 50px;
 }
 
