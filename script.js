@@ -26,7 +26,7 @@ function layout () {
     let width = vh * 100 * 1.6;
     document.documentElement.style.setProperty("--h", `${window.innerHeight}px`);
     document.documentElement.style.setProperty("--w", `${width}px`);
-    document.documentElement.style.setProperty("--gh", `${window.innerHeight}px`);
+    document.documentElement.style.setProperty("--gh", `${Math.ceil(window.innerHeight)}px`);
     document.documentElement.style.setProperty("--gw", `${Math.ceil((window.innerWidth - width)/2)}px`);
   }
 }
