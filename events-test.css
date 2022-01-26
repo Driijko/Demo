@@ -60,7 +60,6 @@ a:focus {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
   --h: calc(var(--w) * 1.777);
-  --gh: calc((100vh - var(--h))/2);
   height: 100%;
 }
 
@@ -76,19 +75,19 @@ body {
 
 #fixed-layer {
   display: fixed;
-  border: 5px solid red;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
+
 }
 
 #gutter1, #gutter2 {
   position: absolute;
   width: var(--gw);
   height: var(--gh);
-  background-color: blue;
 }
 
 #gutter1 {
@@ -101,27 +100,33 @@ body {
   bottom: 0;
 }
 
-/* #msc {
+#msc {
+  position: absolute;
+  top: 0;
   width: 100%;
   height: 100%;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-} */
+  scroll-behavior: smooth;
+}
 
-/* .vp {
-  width: 100vw;
-  height: 100vh;
+.vp {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   scroll-snap-align: start;
-} */
+  border: 5px solid green;
+}
 
 .ur {
   position: relative;
   width: var(--w);
   height: var(--h);
-  border: 5px solid green;
+  border: 5px solid red;
+  color: white;
+  font-size: 50px;
 }
 
 /* .abs {
