@@ -4,6 +4,7 @@ function layout () {
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 
   // Determine what orientation device has.
+  // We add +1 to gutter lengths to avoid layout bugs that I don't quite understand.
   if (window.innerWidth < window.innerHeight) {
     let aspectRatio = window.innerHeight / window.innerWidth;
     if (aspectRatio < 1.777) {
@@ -21,11 +22,22 @@ function layout () {
     };
   }
   else {
-    let width = vh * 100 * 1.6;
-    document.documentElement.style.setProperty("--h", `${window.innerHeight}px`);
-    document.documentElement.style.setProperty("--w", `${width}px`);
-    document.documentElement.style.setProperty("--gh", `${window.innerHeight + 1}px`);
-    document.documentElement.style.setProperty("--gw", `${((window.innerWidth - width)/2) + 1}px`);
+    let aspectRatio = window.innerWidth / window.innerHeight;
+    if(aspectRatio < 1.6) {
+      let height = ((0.625 * window.innerWidth) / window.innerHeight) * window.innerHeight;
+      document.documentElement.style.setProperty("--h", `${height}px`);
+      document.documentElement.style.setProperty("--w", `${window.innerWidth}px`);
+      document.documentElement.style.setProperty("--gh", `${((window.innerHeight - height)/2)+1}px`);
+      document.documentElement.style.setProperty("--gw", `${(window.innerWidth) + 1}px`);
+    }
+    else {
+      let width = vh * 100 * 1.6;
+      document.documentElement.style.setProperty("--h", `${window.innerHeight}px`);
+      document.documentElement.style.setProperty("--w", `${width}px`);
+      document.documentElement.style.setProperty("--gh", `${window.innerHeight + 1}px`);
+      document.documentElement.style.setProperty("--gw", `${((window.innerWidth - width)/2) + 1}px`);
+    }
+
   }
 }
 
