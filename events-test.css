@@ -92,7 +92,6 @@ body {
   justify-content: center;
   align-items: center;
   background-color: black;
-
 }
 
 #gutter1, #gutter2 {
@@ -120,7 +119,7 @@ body {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  scrollbar-width: none;
+  /* scrollbar-width: none; */
 }
 
 .vp {
