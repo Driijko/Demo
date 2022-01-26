@@ -12,13 +12,13 @@ function layout () {
       document.documentElement.style.setProperty("--w", `${width}px`);
       document.documentElement.style.setProperty("--h", `${window.innerHeight}px`);
       document.documentElement.style.setProperty("--gh", `${window.innerHeight}px`);
-      document.documentElement.style.setProperty("--gw", `${(window.innerWidth - width)/2}px`);
+      document.documentElement.style.setProperty("--gw", `${Math.ceil((window.innerWidth - width)/2)}px`);
     }
     else {
       console.log("hi");
       document.documentElement.style.setProperty("--h", `${window.innerWidth * 1.777}px`);
       document.documentElement.style.setProperty("--w", `${window.innerWidth}px`);
-      document.documentElement.style.setProperty("--gh", `${(window.innerHeight - (window.innerWidth * 1.777))/2}px`);
+      document.documentElement.style.setProperty("--gh", `${Math.ceil((window.innerHeight - (window.innerWidth * 1.777))/2)}px`);
       document.documentElement.style.setProperty("--gw", `${window.innerWidth}px`);
     };
   }
@@ -27,7 +27,7 @@ function layout () {
     document.documentElement.style.setProperty("--h", `${window.innerHeight}px`);
     document.documentElement.style.setProperty("--w", `${width}px`);
     document.documentElement.style.setProperty("--gh", `${window.innerHeight}px`);
-    document.documentElement.style.setProperty("--gw", `${(window.innerWidth - width)/2}px`);
+    document.documentElement.style.setProperty("--gw", `${Math.ceil((window.innerWidth - width)/2)}px`);
   }
 }
 
