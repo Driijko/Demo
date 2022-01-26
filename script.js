@@ -32,7 +32,7 @@ function layout () {
 layout();
 
 window.addEventListener("resize", ()=> {
-  setTimeout(layout(), 2000);
+  setTimeout(layout, 2000);
 });
 
 
