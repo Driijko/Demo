@@ -84,23 +84,22 @@ body {
   align-items: center;
 }
 
-/* #fixed-layer .ur {
-  top: var(--gh);
-} */
-
-/* #gutter1, #gutter2 {
+#gutter1, #gutter2 {
   position: absolute;
+  width: var(--gw);
   height: var(--gh);
-  width: 100%;
-} */
+  background-color: blue;
+}
 
-/* #gutter1 {
+#gutter1 {
+  left: 0;
   top: 0;
-} */
+}
 
-/* #gutter2 {
+#gutter2 {
+  right: 0;
   bottom: 0;
-} */
+}
 
 /* #msc {
   width: 100%;
