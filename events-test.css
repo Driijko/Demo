@@ -146,9 +146,10 @@ body {
 }
 
 #fixed-layer .ur {
-  background-image: url("./assets/images/events-6.jpg");
+  background-image: url("./assets/images/events-5.jpg");
   background-size: 400%;
-  background-position: 62% 15%;
+  /* background-position: 62% 15%; */
+  /* background-position: 0% 0%; */
   filter:brightness(50%);
 }
 
@@ -288,7 +289,6 @@ header {
   
   #events-menu ul h3 {
     font-size: calc(var(--w)/40);
-
   }
   
   #events-menu ul p {
