@@ -1,3 +1,11 @@
+/* FONTS //////////////////////////////////// */
+@font-face {
+  font-family: 'Coolvetica-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Coolvetica-Regular'), url('./assets/fonts/coolvetica.woff') format('woff');
+}
+
 header {
     height: 20vh;
     position: relative;
@@ -6,6 +14,7 @@ header {
 header h1 {
     position: relative;
     top: -5%;
+    font-family: "Coolvetica-Regular";
 }
 
 nav {

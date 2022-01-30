@@ -20,6 +20,7 @@ function layout () {
       document.documentElement.style.setProperty("--gh", `${((window.innerHeight - (window.innerWidth * 1.777))/2) + 1}px`);
       document.documentElement.style.setProperty("--gw", `${window.innerWidth + 1}px`);
     };
+    document.documentElement.style.setProperty("--orientation", "portrait");
   }
   else {
     let aspectRatio = window.innerWidth / window.innerHeight;
@@ -37,7 +38,7 @@ function layout () {
       document.documentElement.style.setProperty("--gh", `${window.innerHeight + 1}px`);
       document.documentElement.style.setProperty("--gw", `${((window.innerWidth - width)/2) + 1}px`);
     }
-
+    document.documentElement.style.setProperty("--orientation", "landscape");
   }
 }
 
