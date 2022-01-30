@@ -71,6 +71,7 @@ a:focus {
   overflow: -moz-scrollbars-none; 
   font-family: "Roboto Condensed", sans-serif;
   color: black;
+  color: rgb(255, 234, 204);
 }
 
 /* Chrome and Safari */
@@ -148,6 +149,7 @@ body {
   background-image: url("./assets/images/events-6.jpg");
   background-size: 400%;
   background-position: 62% 15%;
+  filter:brightness(50%);
 }
 
 /* HEADER ////////////////////////////////// */
@@ -155,7 +157,7 @@ body {
 header {
   height: 20%;
   width: 100%;
-  color: rgb(255, 234, 204);
+  border-bottom: calc(var(--w)/100) solid rgb(255, 234, 204);
 }
 
 header h1 {
@@ -187,7 +189,8 @@ header nav ul li {
 
 /* EVENTS MENU ////////////////////////////////////// */
 h2 {
-  top: 23%;
+  top: 24%;
+  font-size: calc(var(--w)/6);
 }
 
 #registration-note {
@@ -246,7 +249,53 @@ header {
 }
 
 @media only screen and (orientation: landscape) {
-  .ur {
-    background-color: red;
+  .mobile {
+    display: none;
+  }
+
+  #fixed-layer .ur {
+    background-size: 150%;
+    background-position: 30% 30%;
+  }
+  /* HEADER -------------------------------------- */
+  header {
+    border-bottom-width: calc(var(--w)/200);
+  }
+
+  header h1 {
+    top: 25%;
+    font-size: calc(var(--w)/20);
+  }
+  
+  header nav {
+    font-size: calc(var(--w)/50);
+  }
+
+  /* EVENTS MENU --------------------------------------------- */
+  h2 {
+    left: 2%;
+    font-size: calc(var(--w)/20);
+  }
+  
+  #registration-note {
+    font-size: calc(var(--w)/50);
+    left: 2.5%;
+  }
+  
+  #events-menu ul {
+    left: 2%;
+  }
+  
+  #events-menu ul h3 {
+    font-size: calc(var(--w)/40);
+
+  }
+  
+  #events-menu ul p {
+    font-size: calc(var(--w)/45);
+  }
+
+  #events-menu a:hover, #events-menu a:focus {
+    color: hsl(150, 100%, 50%);
   }
 }
