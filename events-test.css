@@ -149,7 +149,7 @@ body {
   background-image: url("./assets/images/events-5.jpg");
   background-size: 400%;
   /* background-position: 62% 15%; */
-  /* background-position: 0% 0%; */
+  background-position: 30% 100%;
   filter:brightness(50%);
 }
 
