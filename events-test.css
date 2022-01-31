@@ -150,7 +150,7 @@ body {
 }
 
 .unicode {
-  font-family: "Arial", san-serif;
+  font-family: default, "Arial", san-serif !important;
 }
 
 #fixed-layer .ur {
