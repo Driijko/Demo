@@ -232,6 +232,7 @@ h3 {
   font-weight: bold;
 }
 
+
 .sub-title {
   font-size: calc(var(--w)/15);
   padding-bottom: 5%;
@@ -352,4 +353,55 @@ header {
   #events-menu a:hover, #events-menu a:focus {
     color: hsl(150, 100%, 50%);
   }
+
+  /* EVENTS //////////////////////////////////////////////// */
+.event {
+  padding-top: 4%;
+}
+
+h3 {
+  font-size: calc(var(--w)/25);
+  line-height: 1.2;
+}
+
+#exhibition-sub-title {
+  font-size: calc(var(--w)/30);
+}
+
+.sub-title {
+  font-size: calc(var(--w)/40);
+  padding-bottom: 3%;
+}
+
+.venue {
+  font-size: calc(var(--w)/35);
+  padding-bottom: 2%;
+}
+
+.date {
+  font-size: calc(var(--w)/35);
+  padding-bottom: 3%;
+}
+
+.event-description {
+  font-size: calc(var(--w)/50);
+  width: 70%;
+}
+
+.event-description p {
+  line-height: 1.5;
+}
+
+.top-of-chapter-link-right {
+  font-size: calc(var(--w)/50);
+  left: 90%;
+  top: 95%;
+}
+
+#event1 ul {
+  padding-top: 5%;
+  padding-left: 10%;
+  list-style: disc outside;
+  line-height: 1.5;
+}
 }
