@@ -149,6 +149,10 @@ body {
   font-style: italic;
 }
 
+.unicode {
+  font-family: "Arial", san-serif;
+}
+
 #fixed-layer .ur {
   background-image: url("./assets/images/events-5.jpg");
   background-size: 400%;
