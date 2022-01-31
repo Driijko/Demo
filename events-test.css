@@ -391,7 +391,10 @@ header {
     font-size: calc(var(--w)/45);
   }
 
-  #events-menu a:hover, #events-menu a:focus {
+  #events-menu a:hover, #events-menu a:focus,
+  .learn-more-link:hover, .learn-more-link:focus,
+  .top-of-chapter-link-right:hover, .top-of-chapter-link-right:focus,
+  .top-of-chapter-link-left:hover, .top-of-chapter-link-left:focus {
     color: hsl(150, 100%, 50%);
   }
 
@@ -433,8 +436,12 @@ h3 {
   line-height: 1.5;
 }
 
-.top-of-chapter-link-right {
+.top-of-chapter-link-left, .top-of-chapter-link-right,
+.learn-more-link {
   font-size: calc(var(--w)/50);
+}
+
+.top-of-chapter-link-right {
   left: 90%;
   top: 95%;
 }
@@ -444,5 +451,28 @@ h3 {
   padding-left: 10%;
   list-style: disc outside;
   line-height: 1.5;
+}
+
+#event2 .learn-more-link {
+  top: 90%;
+  left: 0%;
+}
+
+#event2 .top-of-chapter-link-right {
+  top: 90%;
+  left: 88%;
+}
+
+#event2-continued .ur, #event4-continued .ur {
+  width: var(--w);
+}
+
+#event2-continued p, #event4-continued p {
+  width: 70% !important;
+}
+
+#event4 .event-description p {
+  font-size: calc(var(--w)/54);
+  width: 100%;
 }
 }
