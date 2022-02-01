@@ -147,7 +147,7 @@ i {
 
 /* This is to ensure that unicode symbols work. */
 .unicode {
-  font-family: "Droid Sans", sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .row {
