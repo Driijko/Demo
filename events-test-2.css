@@ -242,4 +242,13 @@ i {
   .cvi2 a, .cvi3 a, .chi2 a {
     pointer-events: initial;
   }
+
+  .chi2 a:hover {
+    color: red;
+  }
+
+  #test1 {
+    position: absolute;
+    left: 0%;
+  }
 }
