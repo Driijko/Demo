@@ -52,6 +52,7 @@ a:focus {
 }
 /* END OF RESET //////////////////////////////////////////////// */
 
+/* MAIN TOOLS ////////////////////////////////////////////////// */
 * {
   box-sizing: border-box;
 }
@@ -150,17 +151,6 @@ i {
   font-family: "Baskerville", sans-serif;
 }
 
-.row {
-  width: 100%;
-  height: 100%;
-  scroll-snap-align: start;
-  scroll-snap-type: x mandatory;
-  display: flex;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-}
-
 .cv2 {
   width: 100%;
   height: 200%;
@@ -170,7 +160,6 @@ i {
 .cvi2 {
   width: 100%;
   height: 50%;
-  font-size: 30px;
   scroll-snap-align: start;
   display: flex;
   justify-content: center;
@@ -193,6 +182,35 @@ i {
   align-items: center;
 }
 
+.row {
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.ch2 {
+  width: 200%;
+  height: 100%;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  flex: none;
+}
+
+.chi2 {
+  border: 5px solid green;
+  width: 50%;
+  height: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* DESKTOP ////////////////////////////////////////////// */
 @media only screen and (orientation: landscape) {
   .cv2, .cv3 {
@@ -208,7 +226,20 @@ i {
     pointer-events: none;
   }
 
-  .cvi2 a, .cvi3 a {
+  .ch2 {
+    width: 100%;
+    position: relative;
+  }
+
+  .chi2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+  }
+
+  .cvi2 a, .cvi3 a, .chi2 a {
     pointer-events: initial;
   }
 }
