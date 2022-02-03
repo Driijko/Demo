@@ -409,10 +409,10 @@ h3 {
   left: 41%;
 }
 
-.arrow-link:hover, .arrow-link:focus {
+/* .arrow-link:hover, .arrow-link:focus {
   background-color: black;
   color:hsl(150, 100%, 50%);
-}
+} */
 
 /* MOBILE: EXHIBITION OPENING ------------------------------------ */
 #confinement-and-contagion-exhibition-opening h3 {
