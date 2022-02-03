@@ -57,6 +57,14 @@ a:focus {
   box-sizing: border-box;
 }
 
+*:target {
+  outline: 1px solid transparent;
+}
+
+/* *:target a {
+  outline: 1px solid red;
+} */
+
 :root {
   height: 100%;
   -ms-overflow-style: none;
@@ -351,10 +359,10 @@ h2 {
   font-size: calc(var(--w)/17);
 }
 
-/* #events-menu a:hover, #events-menu a:focus {
+#events-menu a:hover, #events-menu a:focus {
   color: hsl(150, 100%, 50%);
   background-color: hsla(0, 0%, 0%, 0.5);
-} */
+}
 
 /* MOBILE:EVENTS -------------------------------------------- */
 
@@ -409,10 +417,10 @@ h3 {
   left: 41%;
 }
 
-/* .arrow-link:hover, .arrow-link:focus {
+.arrow-link:hover, .arrow-link:focus {
   background-color: black;
   color:hsl(150, 100%, 50%);
-} */
+}
 
 /* MOBILE: EXHIBITION OPENING ------------------------------------ */
 #confinement-and-contagion-exhibition-opening h3 {

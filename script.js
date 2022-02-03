@@ -57,6 +57,6 @@ window.addEventListener("resize", ()=> {
   }
 });
 
-
+// $('#page').on('click', '.jump', function() { $('#health-and-harm-reduction-workshop').hide().show(); });
 
 
