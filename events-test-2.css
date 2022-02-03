@@ -247,7 +247,7 @@ i {
 
 /* MOBILE: FIXED-LAYER ----------------------------------------- */
 #fixed-layer .ur {
-  /* background-image: url("./assets/images/events.jpg"); */
+  background-image: url("./assets/images/events.jpg");
   background-size: 400%;
   background-position: 30% 100%;
   filter:brightness(50%);
