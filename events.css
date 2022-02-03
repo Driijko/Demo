@@ -351,10 +351,10 @@ h2 {
   font-size: calc(var(--w)/17);
 }
 
-#events-menu a:hover, #events-menu a:focus {
+/* #events-menu a:hover, #events-menu a:focus {
   color: hsl(150, 100%, 50%);
   background-color: hsla(0, 0%, 0%, 0.5);
-}
+} */
 
 /* MOBILE:EVENTS -------------------------------------------- */
 
