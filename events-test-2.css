@@ -233,6 +233,7 @@ i {
 #fixed-layer .ur {
   background-image: url("./assets/images/events-small.jpg");
   filter:brightness(50%);
+  background-size: 100%;
 }
 @media only screen and (min-width:601px) and (max-width: 1920px) {
   #fixed-layer .ur {
