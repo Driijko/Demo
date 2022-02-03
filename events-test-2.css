@@ -145,11 +145,6 @@ i {
   display: none;
 }
 
-/* This is to ensure that unicode symbols work. */
-.unicode {
-  font-family: "Baskerville", sans-serif;
-}
-
 .cv2 {
   width: 100%;
   height: 200%;
@@ -230,9 +225,9 @@ i {
 #fixed-layer .ur {
   background-image: url("./assets/images/events-small.jpg");
 }
-@media only screen and (min-width:1024px) {
+/* @media only screen and (min-width:1024px) {
 
-}
+} */
 
 /* MOBILE: CONTENT /////////////////////////////////////////////////// */
 
