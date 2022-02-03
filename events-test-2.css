@@ -221,23 +221,41 @@ i {
   align-items: center;
 }
 
-/* IMAGES RESIZING ///////////////////////////////////////////////// */
-#fixed-layer .ur {
-  background-image: url("./assets/images/events-small.jpg");
-}
-/* @media only screen and (min-width:1024px) {
-
-} */
-
-/* MOBILE: CONTENT /////////////////////////////////////////////////// */
-
-/* FONTS ------------------------------------------------------------- */
+/* FONTS ////////////////////////////////////////////////////////////// */
 @font-face {
   font-family: 'Coolvetica-Regular';
   font-style: normal;
   font-weight: normal;
   src: local('Coolvetica-Regular'), url('./assets/fonts/coolvetica.woff') format('woff');
 }
+
+/* IMAGE RESIZING ///////////////////////////////////////////////// */
+#fixed-layer .ur {
+  background-image: url("./assets/images/events-small.jpg");
+  filter:brightness(50%);
+}
+@media only screen and (min-width:601px) and (max-width: 1920px) {
+  #fixed-layer .ur {
+    background-size: 400%;
+    background-position: 30% 100%;
+    background-image: url("./assets/images/events-medium.jpg");
+  }
+  @media only screen and (orientation: landscape) {
+    #fixed-layer .ur {
+      background-size: 150%;
+      background-position: 30% 100%;
+    }
+  }
+}
+@media only screen and (min-width: 1921px) {
+  #fixed-layer .ur {
+    background-size: 150%;
+    background-position: 30% 100%;
+    background-image: url("./assets/images/events-large.jpg");
+  }
+}
+
+/* MOBILE: CONTENT /////////////////////////////////////////////////// */
 
 /* MOBILE: GENERAL --------------------------------------------------- */
 :root {
@@ -246,13 +264,6 @@ i {
 }
 
 /* MOBILE: FIXED-LAYER ----------------------------------------- */
-#fixed-layer .ur {
-  background-image: url("./assets/images/events.jpg");
-  background-size: 400%;
-  background-position: 30% 100%;
-  filter:brightness(50%);
-}
-
 #gutter1, #gutter2 {
   background-color: black;
 }
@@ -325,7 +336,6 @@ h2 {
 
 #events-menu a {
   padding-left: 2%;
-  /* border: 1px solid red; */
 }
 
 #events-menu h3 {
@@ -589,12 +599,6 @@ h3 {
   }
 
   /* DESKTOP: CONTENT ////////////////////////////////////////////// */
-
-  /* DESKTOP: FIXED-LAYER ---------------------------------------- */
-  #fixed-layer .ur {
-    background-size: 150%;
-    background-position: 30% 100%;
-  }
 
   /* DESKTOP: HEADER ------------------------------------------- */
   header {
