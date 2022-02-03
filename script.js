@@ -5,7 +5,7 @@ function layout () {
 
   // Determine what orientation device has.
   // We add +1 to gutter lengths to avoid layout bugs that I don't quite understand.
-  if (window.innerWidth < window.innerHeight) {
+  if (window.innerWidth <= window.innerHeight) {
     let aspectRatio = window.innerHeight / window.innerWidth;
     if (aspectRatio < 1.777) {
       let width = ((0.5625 * window.innerHeight) / window.innerWidth) * window.innerWidth;
