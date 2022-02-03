@@ -336,6 +336,11 @@ h2 {
   font-size: calc(var(--w)/17);
 }
 
+#events-menu a:hover, #events-menu a:focus {
+  color: hsl(150, 100%, 50%);
+  background-color: hsla(0, 0%, 0%, 0.5);
+}
+
 /* MOBILE:EVENTS -------------------------------------------- */
 
 h3 {
@@ -387,6 +392,11 @@ h3 {
 
 .arrow-link-middle {
   left: 41%;
+}
+
+.arrow-link:hover, .arrow-link:focus {
+  background-color: black;
+  color:hsl(150, 100%, 50%);
 }
 
 /* MOBILE: EXHIBITION OPENING ------------------------------------ */
@@ -629,11 +639,6 @@ h3 {
     height: 100%;
   }
 
-  #events-menu a:hover, #events-menu a:focus {
-    color: hsl(150, 100%, 50%);
-    background-color: hsla(0, 0%, 0%, 0.5);
-  }
-
   /* DESKTOP: EVENTS -------------------------------------------- */
   h3 {
     font-size: calc(var(--w)/25);
@@ -673,13 +678,7 @@ h3 {
   .arrow-link-right {
     left: 85%;
   }
-
-  .arrow-link:hover, .arrow-link:focus {
-    background-color: black;
-    color:hsl(150, 100%, 50%);
-  }
   
-
   /* DESKTOP: EXHIBITION OPENING  ------------------------------------ */
   #confinement-and-contagion-exhibition-opening h3 {
     line-height: 1;
