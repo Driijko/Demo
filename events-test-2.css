@@ -226,6 +226,14 @@ i {
   align-items: center;
 }
 
+/* IMAGES RESIZING ///////////////////////////////////////////////// */
+#fixed-layer .ur {
+  background-image: url("./assets/images/events-small.jpg");
+}
+@media only screen and (min-width:1024px) {
+
+}
+
 /* MOBILE: CONTENT /////////////////////////////////////////////////// */
 
 /* FONTS ------------------------------------------------------------- */
@@ -244,7 +252,7 @@ i {
 
 /* MOBILE: FIXED-LAYER ----------------------------------------- */
 #fixed-layer .ur {
-  background-image: url("./assets/images/events-5.jpg");
+  /* background-image: url("./assets/images/events.jpg"); */
   background-size: 400%;
   background-position: 30% 100%;
   filter:brightness(50%);
