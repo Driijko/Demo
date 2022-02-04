@@ -441,18 +441,19 @@ h3 {
 }
 
 #confinement-and-contagion-exhibition-opening .venue {
-  top: 35%;
+  top: 32%;
   left: 3%;
 }
 
 #confinement-and-contagion-exhibition-opening .date {
-  top: 48%;
+  top: 45%;
   left: 3%;
 }
 
 #confinement-and-contagion-exhibition-opening .basic-event-description {
-  top: 61.5%;
+  top: 60%;
   left: 3%;
+  width: 90%;
 }
 
 #confinement-and-contagion-exhibition-opening-page2 p {
