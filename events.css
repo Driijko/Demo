@@ -1,17 +1,5 @@
 /* RESET ////////////////////////////////////////// */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+/* html, body, div, span, h1, h2, h3, p, a, i, ul, li,header,nav, section {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -20,9 +8,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+header,nav, section {
 	display: block;
 }
 body {
@@ -31,18 +17,6 @@ body {
 ol, ul {
 	list-style: none;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
 a {
 	text-decoration: none;
 	color: inherit;
@@ -50,12 +24,12 @@ a {
 }
 a:focus {
 	outline: none;
-}
+} */
 
 /* MOBILE: CSS TOOLKIT ////////////////////////////////////////////////// */
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 /* Fixes a Chrome rendering bug. */
 .vp:target, .ch2:target {
@@ -66,22 +40,21 @@ a:focus {
   outline: 1px solid transparent;
 }
 
-:root {
+/* :root {
   height: 100%;
   -ms-overflow-style: none;
   overflow: hidden;
   overflow: -moz-scrollbars-none; 
-}
+} */
 
 /* Chrome and Safari */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */
 
-body {
+/* body {
   width: 100%;
   height: 100%;
-  /* Prevent address bar from disappearing on mobile. */
   position: fixed;
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
@@ -130,8 +103,6 @@ body {
   justify-content: center;
   align-items: center;
   scroll-snap-align: start;
-  /* This allows us to use rows properly as otherwise
-  these divs will shrink down. */
   flex: none;
 }
 
@@ -143,7 +114,7 @@ body {
 
 .abs {
   position: absolute;
-}
+} */
 
 i {
   font-style: italic;
@@ -231,16 +202,16 @@ i {
 }
 
 /* FONTS ////////////////////////////////////////////////////////////// */
-@font-face {
+/* @font-face {
   font-family: 'Coolvetica-Regular';
   font-style: normal;
   font-weight: normal;
   font-display: swap;
   src: local('Coolvetica-Regular'), url('./assets/fonts/coolvetica.woff') format('woff');
-}
+} */
 
 /* IMAGE RESIZING ///////////////////////////////////////////////// */
-#fixed-layer .ur {
+/* #fixed-layer .ur {
   background-image: url("./assets/images/events-small.jpg");
   filter:brightness(50%);
   background-size: 100%;
@@ -264,23 +235,23 @@ i {
     background-position: 30% 100%;
     background-image: url("./assets/images/events-large.jpg");
   }
-}
+} */
 
 /* MOBILE: CONTENT /////////////////////////////////////////////////// */
 
 /* MOBILE: GENERAL --------------------------------------------------- */
-:root {
+/* :root {
   font-family: "Roboto Condensed", sans-serif;
   color: rgb(255, 234, 204); 
-}
+} */
 
 /* MOBILE: FIXED-LAYER ----------------------------------------- */
-#gutter1, #gutter2 {
+/* #gutter1, #gutter2 {
   background-color: black;
-}
+} */
 
 /* MOBILE: HEADER ------------------------------------------------- */
-header {
+/* header {
   height: 20%;
   width: 100%;
   border-bottom: calc(var(--w)/100) solid rgb(255, 234, 204);
@@ -326,10 +297,10 @@ header a {
 
 header a:hover, header a:focus {
   transform: scale(150%);
-}
+} */
 
 /* MOBILE: EVENTS MENU ----------------------------------------- */
-h2 {
+/* h2 {
   left: 1%;
   top: 24%;
   font-size: calc(var(--w)/6);
@@ -368,7 +339,7 @@ h2 {
 
 #events-menu ul p {
   font-size: calc(var(--w)/17);
-}
+} */
 
 /* MOBILE:EVENTS -------------------------------------------- */
 
@@ -441,19 +412,20 @@ h3 {
 }
 
 #confinement-and-contagion-exhibition-opening .venue {
-  top: 32%;
+  top: 35%;
   left: 3%;
 }
 
 #confinement-and-contagion-exhibition-opening .date {
-  top: 45%;
+  top: 48%;
   left: 3%;
 }
 
 #confinement-and-contagion-exhibition-opening .basic-event-description {
-  top: 60%;
+  top: 65%;
   left: 3%;
-  width: 90%;
+  width: 95%;
+  font-size: calc(var(--w)/19);
 }
 
 #confinement-and-contagion-exhibition-opening-page2 p {
@@ -618,7 +590,7 @@ h3 {
   /* DESKTOP: CONTENT ////////////////////////////////////////////// */
 
   /* DESKTOP: HEADER ------------------------------------------- */
-  header {
+  /* header {
     border-bottom-width: calc(var(--w)/200);
   }
 
@@ -629,10 +601,10 @@ h3 {
   
   header nav {
     font-size: calc(var(--w)/50);
-  }
+  } */
 
   /* DESKTOP: EVENTS MENU ---------------------------------------- */
-  h2 {
+  /* h2 {
     left: 2%;
     font-size: calc(var(--w)/20);
   }
@@ -653,7 +625,7 @@ h3 {
   #events-menu a {
     width: 100%;
     height: 100%;
-  }
+  } */
 
   /* DESKTOP: EVENTS -------------------------------------------- */
   h3 {
@@ -818,8 +790,3 @@ h3 {
     top: 35%;
   }
 }
-
-
-
-
-

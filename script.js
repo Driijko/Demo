@@ -42,8 +42,6 @@ function layout () {
   }
 }
 
-document.documentElement.style.setProperty("--test", "5px");
-
 
 layout();
 
@@ -59,7 +57,3 @@ window.addEventListener("resize", ()=> {
     setTimeout(resize, 2000);
   }
 });
-
-// $('#page').on('click', '.jump', function() { $('#health-and-harm-reduction-workshop').hide().show(); });
-
-

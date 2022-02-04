@@ -1,0 +1,276 @@
+/* RESET ////////////////////////////////////////// */
+html, body, div, span, h1, h2, h3, p, a, i, ul, li,header,nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+header,nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+  display: block;
+}
+a:focus {
+	outline: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  height: 100%;
+  -ms-overflow-style: none;
+  overflow: hidden;
+  overflow: -moz-scrollbars-none; 
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+#fixed-layer {
+  display: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gutter1, #gutter2 {
+  position: absolute;
+  width: var(--gw);
+  height: var(--gh);
+}
+
+#gutter1 {
+  left: 0;
+  top: 0;
+}
+
+#gutter2 {
+  right: 0;
+  bottom: 0;
+}
+
+#msc {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.vp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  flex: none;
+}
+
+.ur {
+  position: relative;
+  width: var(--w);
+  height: var(--h);
+}
+
+.abs {
+  position: absolute;
+}
+
+@font-face {
+  font-family: 'Coolvetica-Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: local('Coolvetica-Regular'), url('./assets/fonts/coolvetica.woff') format('woff');
+}
+
+#fixed-layer .ur {
+  background-image: url("./assets/images/events-small.jpg");
+  filter:brightness(50%);
+  background-size: 100%;
+}
+@media only screen and (min-width:601px) and (max-width: 1920px) {
+  #fixed-layer .ur {
+    background-size: 400%;
+    background-position: 30% 100%;
+    background-image: url("./assets/images/events-medium.jpg");
+  }
+  @media only screen and (orientation: landscape) {
+    #fixed-layer .ur {
+      background-size: 150%;
+      background-position: 30% 100%;
+    }
+  }
+}
+@media only screen and (min-width: 1921px) {
+  #fixed-layer .ur {
+    background-size: 150%;
+    background-position: 30% 100%;
+    background-image: url("./assets/images/events-large.jpg");
+  }
+}
+
+:root {
+  font-family: "Roboto Condensed", sans-serif;
+  color: rgb(255, 234, 204); 
+}
+
+#gutter1, #gutter2 {
+  background-color: black;
+}
+
+header {
+  height: 20%;
+  width: 100%;
+  border-bottom: calc(var(--w)/100) solid rgb(255, 234, 204);
+  background-image: linear-gradient(
+    hsl(120, 30%, 70%),
+    hsl(45, 80%, 50%),
+    hsl(120, 30%, 70%)
+  );
+}
+
+header h1 {
+  text-align: center;
+  width: 100%;
+  top: 40%;
+  font-size: calc(var(--w)/13);
+  font-family: "Coolvetica-Regular", sans-serif;
+}
+
+header nav {
+  height: 35%;
+  width: 100%;
+  top: 65%;
+  font-size: calc(var(--w)/25);
+}
+
+header ul {
+  height: 100%;
+  display: flex;
+}
+
+header li {
+  width: 25%;
+}
+
+header a {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 1.5s ease-out;
+}
+
+header a:hover, header a:focus {
+  transform: scale(150%);
+}
+
+h2 {
+  left: 1%;
+  top: 24%;
+  font-size: calc(var(--w)/6);
+}
+
+#registration-note {
+  font-size: calc(var(--w)/22);
+  top: 33%;
+  left: 3%;
+}
+
+#events-menu ul {
+  top: 38%;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#events-menu a {
+  padding-left: 2%;
+}
+
+#events-menu a:hover, #events-menu a:focus {
+  color: hsl(150, 100%, 50%);
+  background-color: hsla(0, 0%, 0%, 0.5);
+}
+
+#events-menu h3 {
+  font-size: calc(var(--w)/15);
+  text-decoration: underline;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+#events-menu ul p {
+  font-size: calc(var(--w)/17);
+}
+
+@media only screen and (orientation: landscape) {
+  header {
+    border-bottom-width: calc(var(--w)/200);
+  }
+
+  header h1 {
+    top: 25%;
+    font-size: calc(var(--w)/20);
+  }
+  
+  header nav {
+    font-size: calc(var(--w)/50);
+  }
+
+  h2 {
+    left: 2%;
+    font-size: calc(var(--w)/20);
+  }
+  
+  #registration-note {
+    font-size: calc(var(--w)/50);
+    left: 2.5%;
+  }
+  
+  #events-menu ul h3 {
+    font-size: calc(var(--w)/40);
+  }
+  
+  #events-menu ul p {
+    font-size: calc(var(--w)/45);
+  }
+
+  #events-menu a {
+    width: 100%;
+    height: 100%;
+  }
+}
