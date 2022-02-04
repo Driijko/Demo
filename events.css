@@ -58,7 +58,11 @@ a:focus {
 }
 
 /* Fixes a Chrome rendering bug. */
-*:target {
+.vp:target, .ch2:target {
+  outline: 1px solid transparent;
+}
+
+.vp:target .ur, .ch2:target .ur {
   outline: 1px solid transparent;
 }
 
@@ -317,11 +321,12 @@ header a {
   justify-content: center;
   align-items: center;
   text-align: center;
+  transition: transform 1.5s ease-out;
 }
 
-/* header a:hover, header a:focus {
+header a:hover, header a:focus {
   transform: scale(150%);
-} */
+}
 
 /* MOBILE: EVENTS MENU ----------------------------------------- */
 h2 {
@@ -347,7 +352,6 @@ h2 {
 
 #events-menu a {
   padding-left: 2%;
-  border: env(--test) solid red;
 }
 
 #events-menu a:hover, #events-menu a:focus {
@@ -509,63 +513,63 @@ h3 {
 }
 
 /* FILM DIARY ---------------------------------------------- */
-#event3 .sub-title {
+#film-diary-workshop .sub-title {
   left: 3%;
   top: 10%;
 }
 
-#event3 .venue {
+#film-diary-workshop .venue {
   left: 3%;
   top: 20%;
 }
 
-#event3 .date {
+#film-diary-workshop .date {
   left: 3%;
   top: 28%;
 }
 
-#event3 .event-description {
+#film-diary-workshop .event-description {
   top: 42%;
   left: 3%;
   width: 90%;
   line-height: 1.5;
 }
 
-  /* MOBILE: HEALTH AND HARM REDUCTION WORKSHOP ----------------------- */
-  #event4 h3 {
-    font-size: calc(var(--w)/12);
-    top: 8%;
-  }
+/* MOBILE: HEALTH AND HARM REDUCTION WORKSHOP ----------------------- */
+#health-and-harm-reduction-workshop h3 {
+  font-size: calc(var(--w)/12);
+  top: 8%;
+}
 
-  #event4 .sub-title {
-    left: 3%;
-    top: 20%;
-  }
+#health-and-harm-reduction-workshop .sub-title {
+  left: 3%;
+  top: 20%;
+}
 
-  #event4 .venue {
-    left: 3%;
-    top: 33%;
-  }
+#health-and-harm-reduction-workshop .venue {
+  left: 3%;
+  top: 33%;
+}
 
-  #event4 .date {
-    left: 3%;
-    top: 45%;
-  }
+#health-and-harm-reduction-workshop .date {
+  left: 3%;
+  top: 45%;
+}
 
-  #event4 .basic-event-description {
-    left: 3%;
-    top: 60%;
-  }
+#health-and-harm-reduction-workshop .basic-event-description {
+  left: 3%;
+  top: 60%;
+}
 
-  #health-and-harm-reduction-workshop-page2 p {
-    left: 3%;
-    top: 15%;
-  }
+#health-and-harm-reduction-workshop-page2 p {
+  left: 3%;
+  top: 15%;
+}
 
-  #health-and-harm-reduction-workshop-page3 p {
-    left: 3%;
-    top: 27%;
-  }
+#health-and-harm-reduction-workshop-page3 p {
+  left: 3%;
+  top: 27%;
+}
 
 
 /* DESKTOP ////////////////////////////////////////////// */
@@ -624,10 +628,6 @@ h3 {
   
   header nav {
     font-size: calc(var(--w)/50);
-  }
-
-  header a {
-    transition: transform 1.5s ease-out;
   }
 
   /* DESKTOP: EVENTS MENU ---------------------------------------- */
@@ -765,41 +765,41 @@ h3 {
   }
 
   /* FILM DIARY WORKSHOP ------------------------------------- */
-  #event3 h3 {
+  #film-diary-workshop h3 {
     top: 10%;
   }
 
-  #event3 .sub-title {
+  #film-diary-workshop .sub-title {
     top: 20%;
   }
 
-  #event3 .venue {
+  #film-diary-workshop .venue {
     top: 32%;
   }
 
-  #event3 .date {
+  #film-diary-workshop .date {
     top: 40%;
   }
 
-  #event3 .event-description {
+  #film-diary-workshop .event-description {
     top: 50%;
     width: 70%;
   }
 
   /* DESKTOP: HEALTH AND HARM REDUCTION WORKSHOP ----------------------- */
-  #event4 h3 {
+  #health-and-harm-reduction-workshop h3 {
     font-size: calc(var(--w)/24);
   }
 
-  #event4 .sub-title {
+  #health-and-harm-reduction-workshop .sub-title {
     top: 18%;
   }
 
-  #event4 .venue {
+  #health-and-harm-reduction-workshop .venue {
     top: 32%;
   }
 
-  #event4 .date {
+  #health-and-harm-reduction-workshop .date {
     top: 40%;
   }
 
