@@ -3,19 +3,22 @@
   <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="description" content="Confinement and Contagion is an upcoming Toronto exhibition and workshop series for artists affected by the prison system, focusing on the vulnerability of racialized incarcerated people." />
+      <meta name="description" content="Confinement and Contagion is an upcoming Toronto exhibition and workshop series for artists affected by the prison system, focusing on the vulnerability of racialized incarcerated people." />      
+      <style type="text/css">
+        a,body,div,h1,h2,h3,header,html,i,li,nav,p,section,span,ul{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}header,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}a{text-decoration:none;color:inherit;display:block}a:focus{outline:0}*{box-sizing:border-box}:root{height:100%;-ms-overflow-style:none;overflow:hidden;overflow:-moz-scrollbars-none}::-webkit-scrollbar{display:none}body{width:100%;height:100%;position:fixed;overflow:hidden;-webkit-overflow-scrolling:touch}#fixed-layer{display:fixed;width:100%;height:100%;display:flex;justify-content:center;align-items:center}#gutter1,#gutter2{position:absolute;width:var(--gw);height:var(--gh)}#gutter1{left:0;top:0}#gutter2{right:0;bottom:0}#msc{position:absolute;top:0;width:100%;height:100%;overflow-y:scroll;scroll-snap-type:y mandatory;scroll-behavior:smooth;scrollbar-width:none}.vp{width:100%;height:100%;display:flex;justify-content:center;align-items:center;scroll-snap-align:start;flex:none}.ur{position:relative;width:var(--w);height:var(--h)}.abs{position:absolute}@font-face{font-family:Coolvetica-Regular;font-style:normal;font-weight:400;font-display:swap;src:local('Coolvetica-Regular'),url('./assets/fonts/coolvetica.woff') format('woff')}#fixed-layer .ur{background-image:url("./assets/images/events-small.jpg");filter:brightness(50%);background-size:100%}@media only screen and (min-width:601px) and (max-width:1920px){#fixed-layer .ur{background-size:400%;background-position:30% 100%;background-image:url("./assets/images/events-medium.jpg")}@media only screen and (orientation:landscape){#fixed-layer .ur{background-size:150%;background-position:30% 100%}}}@media only screen and (min-width:1921px){#fixed-layer .ur{background-size:150%;background-position:30% 100%;background-image:url("./assets/images/events-large.jpg")}}:root{font-family:"Roboto Condensed",sans-serif;color:#ffeacc}#gutter1,#gutter2{background-color:#000}header{height:20%;width:100%;border-bottom:calc(var(--w)/100) solid #ffeacc;background-image:linear-gradient(#9bc99b,#e5b219,#9bc99b)}header h1{text-align:center;width:100%;top:40%;font-size:calc(var(--w)/13);font-family:Coolvetica-Regular,sans-serif}header nav{height:35%;width:100%;top:65%;font-size:calc(var(--w)/25)}header ul{height:100%;display:flex}header li{width:25%}header a{height:100%;display:flex;justify-content:center;align-items:center;text-align:center;transition:transform 1.5s ease-out}header a:focus,header a:hover{transform:scale(150%)}h2{left:1%;top:24%;font-size:calc(var(--w)/6)}#registration-note{font-size:calc(var(--w)/22);top:33%;left:3%}#events-menu ul{top:38%;width:100%;height:60%;display:flex;flex-direction:column;justify-content:space-evenly}#events-menu a{padding-left:2%}#events-menu a:focus,#events-menu a:hover{color:#00ff7f;background-color:hsla(0,0%,0%,.5)}#events-menu h3{font-size:calc(var(--w)/15);text-decoration:underline;font-weight:700;line-height:1.3}#events-menu ul p{font-size:calc(var(--w)/17)}@media only screen and (orientation:landscape){header{border-bottom-width:calc(var(--w)/200)}header h1{top:25%;font-size:calc(var(--w)/20)}header nav{font-size:calc(var(--w)/50)}h2{left:2%;font-size:calc(var(--w)/20)}#registration-note{font-size:calc(var(--w)/50);left:2.5%}#events-menu ul h3{font-size:calc(var(--w)/40)}#events-menu ul p{font-size:calc(var(--w)/45)}#events-menu a{width:100%;height:100%}}
+      </style>
 
-      <link rel="preload" href="style-fcp.css" as="style">
+      <!-- <link rel="stylesheet" href="./events-fcp.css" type="text/css" /> -->
       <link rel="preload" href="script.js" as="script">
+      <link rel="preload" href="./assets/images/events-small.jpg" imagescrset="./assets/images/events-small.jpg 600w, ./assets/images/events-medium.jpg 1920w, ./assets/images.events-large.jpg 3840w" />
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-      <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet"> 
-      <link rel="stylesheet" type="text/css" href="events-fcp.css" />
-
       <link rel="icon" type="image/png" href="../../assets/icons/favicon.ico" />
-      <link rel="stylesheet" type="text/css" href="./events.css" />
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"></noscript>
+      <link rel="preload" href="events.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript><link rel="stylesheet" href="events.css"></noscript>
       <title>Confinement and Contagion</title>
-
   </head>
   <body>
 
@@ -23,7 +26,8 @@
     <div id="fixed-layer">
       <div id="gutter1"></div>
       <div id="gutter2"></div>
-      <div class="ur"></div>
+      <div class="ur">
+      </div>
     </div>
 
     <!-- MAIN SCROLLING CONTAINER ///////////////////////////////// -->
