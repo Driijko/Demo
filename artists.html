@@ -2,24 +2,76 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Confinement and Contagion is an upcoming Toronto exhibition and workshop series for artists affected by the prison system, focusing on the vulnerability of racialized incarcerated people" />
     <link rel="icon" type="image/png" href="../../assets/icons/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="./reset.css" />
-    <link rel="stylesheet" type="text/css" href="./header.css" />
-    <link rel="stylesheet" type="text/css" href="./style.css" />
     <link rel="stylesheet" type="text/css" href="./artists.css" />
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"></noscript>
+    <link rel="preload" href="artists.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="artists.css"></noscript>
     <title>Confinement and Contagion</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" type="text/css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet"> 
   </head>
   <body>
 
-    <div id="background"></div>
-    <p id="updating">This page is currently under construction.</p>
-    <br/>
-    <a id="back-link" href="./home.html">&#11160 BACK</a>
+    <!-- FIXED-LAYER /////////////////////////////////////////// -->
+    <div id="fixed-layer">
+      <div id="gutter1"></div>
+      <div id="gutter2"></div>
+      <div class="ur">
+      </div>
+    </div>
+
+    <!-- MAIN SCROLLING CONTAINER //////////////////////////////////// -->
+    <div id="msc">
+
+      <header id="chapter-header" class="vp">
+        <div class="ur">
+
+          <header id="site-header" class="abs">
+            <h1 class="abs">CONFINEMENT AND CONTAGION</h1>
+            <nav class="abs"><ul>
+                <li><a href="./home.html">HOME</a></li>
+                <li><a href="./project-statement.html">PROJECT STATEMENT</a></li>
+                <li><a href="./artists.html">EVENTS</a></li>
+                <li><a href="./project-team.html">PROJECT TEAM</a></li>
+            </ul></nav>
+          </header>
+
+          <h2 class="abs">ARTISTS</h2>
+
+          <a href="" class="abs arrow-link vertical-arrow-link down-vertical-arrow-link">&#9660;</a>
+
+        </div>
+      </header>
+
+      <section id="dannylion" class="vp artist-profile">
+        <div class="ur">
+          <a href="#chapter-header" class=" abs arrow-link vertical-arrow-link up-vertical-arrow-link">
+            &#9650;
+          </a>
+          <header class="artist-header abs">
+            <img src="./assets/profile-pics/artists/DannyLion.jpg" class="abs profile-pic" alt="Cover of album 'Keep it Real' by music artist DannyLion, featuring music artist Eustace." /> 
+            <h3 class="abs">DannyLion</h3>
+            <p class="skill-set abs">
+              Musician, Poet
+            </p>
+          </header>
+          <main class="abs artist-bio">
+            <p>
+              <strong>DannyLion</strong> is an independent hip hop artist, producer, beatboxer and poet with a positive message to spread to the world. He is in the Not Criminally Responsible (NCR) system which is when the criminal justice system meets mental health. The outcome usually creates rather long sentences. He has been incarcerated for 11 years. <strong>DannyLion</strong> works in collaboration with <strong><a href="#singeru" class="inline-artist-link">Singer U</a></strong>. 
+            </p>
+          </main>
+          <a href="" class="abs arrow-link vertical-arrow-link down-vertical-arrow-link">&#9660;</a>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- <div id="background"></div> -->
 
     <!-- <header>
       <h1>CONFINEMENT AND CONTAGION</h1>
@@ -28,18 +80,18 @@
         <li><a href="./project-statement.html">PROJECT STATEMENT</a></li>
         <li><a href="./project-team.html">PROJECT TEAM</a></li>
       </ul></nav>
-    </header>
+    </header> -->
 
-    <main>
-      <section id="page-nav">
+    <!-- <main> -->
+      <!-- <section id="page-nav">
         <h2>ARTISTS</h2>
         <ul>
           <li><a href="#defne">Defne Inceoglu</a></li>
           <li><a href="#rev">Revital Weiss</a></li>
         </ul>
-      </section>
+      </section> -->
 
-      <div class="artist-container" id="defne"> 
+      <!-- <div class="artist-container" id="defne"> 
         <section class="artist">
           <section class="artist-top">
             <img src="assets/profile-pics/artists/temp-artist-portrait.jpg" />
@@ -55,9 +107,9 @@
           <a class="artist-link" href="">ARTIST LINK</a>
           </section>
         </section>
-      </div>
+      </div> -->
 
-      <div class="artist-container" id="rev"> 
+      <!-- <div class="artist-container" id="rev"> 
         <section class="artist">
           <section class="artist-top">
             <img src="assets/profile-pics/rev.jpg" />
@@ -73,6 +125,7 @@
         </section>
       </div> -->
 
-    </main>
+    <!-- </main> -->
+    <script src="script.js"></script>
   </body>
 </html>
