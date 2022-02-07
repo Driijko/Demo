@@ -329,7 +329,12 @@ strong {
   background-color: black;
 }
 
-/* ARROW-LINKS //////////////////////////////////////// */
+/* LINKS ////////////////////////////////////////////// */
+a:hover, a:focus {
+  color:hsl(150, 100%, 50%);
+}
+
+/* ARROW-LINKS -------------------------------------- */
 .vertical-arrow-link {
   border:calc(var(--w)/300) solid rgb(255, 234, 204);
   width: 20%;
@@ -362,6 +367,7 @@ strong {
 /* PAGE-LINKS ////////////////////////////////////////////// */
 .page-link {
   text-align: center;
+  font-size: calc(var(--w)/20);
 }
 
 .page-link-row {
@@ -497,9 +503,15 @@ h3 {
 
 .social-media-sub-section {
   display: flex;
-  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.social-media-profiles {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .social-media-sub-section img {
@@ -507,7 +519,6 @@ h3 {
 }
 
 .social-media-sub-section a {
-  padding: 1%;
   font-size: calc(var(--w)/20);
 }
 
@@ -522,23 +533,31 @@ h3 {
 }
 
 /* RON DALLOWAY --------------------------------------------- */
+#rondalloway header {
+  height: 40%;
+}
 #rondalloway .profile-pic {
-  width: 100%;
+  width: 70%;
   height: 80%;
-  left: 0%;
-  top: -10%;
+  left: 15%;
+  top: -8%;
 }
 
 #rondalloway h3 {
-  left: 5%;
   width: 100%;
-  top: 85%;
-  text-align: left;
+  left: 0%;
+  top: 65%;
 }
 
 #rondalloway .skill-set {
-  top: 90%;
-  left: 55%;
+  left: 0%;
+  width: 100%;
+  top: 85%;
+}
+
+#rondalloway .artist-bio {
+  height: 40%;
+  top: 50%;
 }
 
 /* KAMILAH HAYWOOD ----------------------------------------------- */
@@ -550,19 +569,87 @@ h3 {
   top: 70%;
 }
 
-#kamilahhaywood-page2 .artist-bio {
+#kamilahhaywood-page2 .artist-bio, #susanameza-page2 .artist-bio {
   top: 6%;
   height: 88%;
 }
 
 #kamilahhaywood-page3 .social-media-sub-section {
-  height: 30%;
+  height: 25%;
+}
+
+/* SUSANA MEZA ------------------------------------------------- */
+#susanameza h3 {
+  top: 5%;
+}
+
+#susanameza .skill-set {
+  top: 60%;
+}
+
+/* CHAD POTVIN ------------------------------------------------ */
+#chadpotvin header {
+  top: 6%;
+  height: 23%;
+}
+#chadpotvin h3 {
+  width: 100%;
+  left: 0%;
+  top: 20%;
+}
+
+#chadpotvin .skill-set {
+  left: 0%;
+  width: 100%;
+  top: 60%;
+}
+
+#chadpotvin .artist-bio {
+  top: 30%;
+  height: 60%;
+}
+
+/* LEX TALIONIS ------------------------------------------------ */
+#lextalionis header {
+  top: 5%;
+  height: 14%;
+}
+
+#lextalionis h3 {
+  width: 100%;
+  left: 0%;
+  top: 10%;
+}
+
+#lextalionis .skill-set {
+  top: 60%;
+  left: 0%;
+  width: 100%;
+}
+
+#lextalionis .artist-bio {
+  top: 19%;
+  height: 74%;
+}
+
+/* EUSTACE / SINGER U -------------------------------------------- */
+#singeru h3 {
+  top: 10%;
+}
+
+#singeru .skill-set {
+  top: 65%;
 }
 
 /* LANDSCAPE LAYOUT //////////////////////////////////////// */
 @media only screen and (orientation: landscape) {
 
-  /* ARROW-LINKS /////////////////////////////////////// */
+  /* LINKS ////////////////////////////////////////////// */
+  .page-link {
+    font-size: calc(var(--w)/50);
+  }
+
+  /* ARROW-LINKS------------------------------------------ */
   .vertical-arrow-link {
     width: 10%;
     font-size: calc(var(--w)/50);
@@ -573,7 +660,7 @@ h3 {
     top: 94%;
   }
 
-  /* HEADER //////////////////////////////////////// */
+  /* HEADER ////////////////////////////////////////////// */
   /* SITE HEADER --------------------------------- */
   #site-header {
     border-bottom-width: calc(var(--w)/200);
@@ -605,14 +692,14 @@ h3 {
     height: 65%;
   }
   
-  h3, #rondalloway h3 {
+  h3, #rondalloway h3, #kamilahhaywood h3 {
     top: 70%;
     left: 0%;
     width: 100%;
     font-size: calc(var(--w)/20);
   }
   
-  .skill-set, #rondalloway .skill-set {
+  .skill-set, #rondalloway .skill-set, #kamilahhaywood .skill-set {
     left: 0%;
     width: 100%;
     font-size: calc(var(--w)/30);
@@ -639,6 +726,80 @@ h3 {
 
   #rondalloway h3, #rondalloway .skill-set {
     text-align: center;
+  }
+
+  /* KAMILAH HAYWOOD ----------------------------------------- */
+  #kamilahhaywood img, #susanameza img {
+    padding: 10%;
+  }
+
+  #kamilahhaywood-page2 .artist-bio, #susanameza-page2 .artist-bio {
+    left: 0%;
+  }
+
+  #kamilahhaywood-page2 .page-link-row, #susanameza-page2 .page-link-row {
+    align-self: flex-start;
+  }
+
+  #kamilahhaywood-page3 .ur, #susanameza-page3 .ur {
+    background-image: none;
+  }
+
+  #kamilahhaywood-page3 .social-media-section,
+  #susanameza-page3 .social-media-section {
+    width: 40%;
+    left: 55%;
+  }
+
+  #kamilahhaywood-page3 .social-media-sub-section a,
+  #kamilahhaywood-page3 p,
+  #susanameza-page3 .social-media-sub-section a,
+  #susanameza-page3 p {
+    font-size: calc(var(--w)/50);
+  }
+
+  /* SUSANA MEZA ----------------------------------- */
+  #susanameza h3 {
+    top: 60%;
+  }
+
+  #susanameza .skill-set {
+    top: 75%;
+  }
+
+
+  /* CHAD POTVIN / LEX TALIONIS ----------------------------------- */
+  #lextalionis header, #chadpotvin header {
+    height: 20%;
+    width: 100%;
+    left: 0%;
+    top: 10%;
+  }
+
+  #lextalionis .artist-bio, #chadpotvin .artist-bio {
+    border-top: calc(var(--w)/300) solid rgb(255, 234, 204);
+    border-bottom: calc(var(--w)/300) solid rgb(255, 234, 204);
+    width: 100%;
+    left: 0%;
+    top: 30%;
+    height: 60%;
+  }
+
+  #chadpotvin .artist-bio p {
+    width: 70%;
+  }
+
+  /* EUSTACE / SINGERU -------------------------------------- */
+  #singeru img {
+    padding: 5%;
+  }
+  
+  #singeru h3 {
+    top: 65%;
+  }
+
+  #singeru .skill-set {
+    top: 80%;
   }
 
 }
