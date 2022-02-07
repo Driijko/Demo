@@ -339,6 +339,9 @@ strong {
   border-radius: calc(var(--w)/30);
   background-color: black;
   font-size: calc(var(--w)/20);
+  transition-property: color, background-color, border-color;
+  transition-timing-function: ease-out;
+  transition-duration: 1s;
 }
 
 .down-vertical-arrow-link {
@@ -350,8 +353,20 @@ strong {
 }
 
 .vertical-arrow-link:hover, .vertical-arrow-link:focus {
-  color: red;
-  border-color: red;
+  color: hsl(150, 100%, 70%);
+  border-color: hsl(150, 100%, 50%);
+  background-color: hsl(150, 100%, 5%);
+  /* outline: calc(var(--w)/150)solid hsl(150, 100%, 80%); */
+}
+
+/* PAGE-LINKS ////////////////////////////////////////////// */
+.page-link {
+  text-align: center;
+}
+
+.page-link-row {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* HEADER ///////////////////////////////////// */
@@ -461,7 +476,7 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  font-size: calc(var(--w)/20);
+  font-size: calc(var(--w)/23);
   padding: 0% 5%;
   line-height: 1.5;
 }
@@ -471,14 +486,60 @@ h3 {
   text-decoration: underline;
 }
 
+.social-media-row {
+  display: flex;
+}
+
+.social-media-row a {
+  padding: 1%;
+}
+
+.social-media-icon {
+  width: 7%;
+}
+
+/* RON DALLOWAY --------------------------------------------- */
+#rondalloway .profile-pic {
+  width: 100%;
+  height: 80%;
+  left: 0%;
+  top: -10%;
+}
+
+#rondalloway h3 {
+  left: 5%;
+  width: 100%;
+  top: 85%;
+  text-align: left;
+}
+
+#rondalloway .skill-set {
+  top: 90%;
+  left: 55%;
+}
+
+/* KAMILAH HAYWOOD ----------------------------------------------- */
+#kamilahhaywood h3 {
+  top: 10%;
+}
+
+#kamilahhaywood .skill-set {
+  top: 70%;
+}
+
+#kamilahhaywood-page2 .artist-bio {
+  top: 6%;
+  height: 88%;
+}
+
 /* LANDSCAPE LAYOUT //////////////////////////////////////// */
 @media only screen and (orientation: landscape) {
 
   /* ARROW-LINKS /////////////////////////////////////// */
   .vertical-arrow-link {
-    width: 16%;
-    font-size: calc(var(--w)/40);
-    left: 42%;
+    width: 10%;
+    font-size: calc(var(--w)/50);
+    left: 45%;
   }
 
   .down-vertical-arrow-link {
@@ -504,6 +565,53 @@ h3 {
   h2 {
     font-size: calc(var(--w)/11);
     top: 25%;
+  }
+
+  /* ARTISTS /////////////////////////////////////////////// */
+  .artist-header {
+    width: 50%;
+    height: 80%;
+  }
+  
+  .profile-pic {
+    width: 100%;
+    height: 65%;
+  }
+  
+  h3, #rondalloway h3 {
+    top: 70%;
+    left: 0%;
+    width: 100%;
+    font-size: calc(var(--w)/20);
+  }
+  
+  .skill-set, #rondalloway .skill-set {
+    left: 0%;
+    width: 100%;
+    font-size: calc(var(--w)/30);
+    top: 85%;
+  }
+  
+  .artist-bio {
+    border: none;
+    width: 55%;
+    top: 5%;
+    left: 45%;
+    height: 90%;
+    align-items: center;
+    font-size: calc(var(--w)/50);
+    line-height: 1.5;
+  }
+
+  /* RON DALLOWAY -------------------------------------------- */
+  #rondalloway .profile-pic {
+    width: 80%;
+    left: 10%;
+    top: -5%;
+  }
+
+  #rondalloway h3, #rondalloway .skill-set {
+    text-align: center;
   }
 
 }
