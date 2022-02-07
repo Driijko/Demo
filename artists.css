@@ -486,12 +486,32 @@ h3 {
   text-decoration: underline;
 }
 
-.social-media-row {
+.social-media-section {
   display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  top: 7%;
+  width: 100%;
+  height: 86%;
+}
+
+.social-media-sub-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.social-media-sub-section img {
+  width: 15%;
+}
+
+.social-media-sub-section a {
+  padding: 1%;
+  font-size: calc(var(--w)/20);
 }
 
 .social-media-row a {
-  padding: 1%;
 }
 
 .social-media-icon {
@@ -530,6 +550,10 @@ h3 {
 #kamilahhaywood-page2 .artist-bio {
   top: 6%;
   height: 88%;
+}
+
+#kamilahhaywood-page3 .social-media-sub-section {
+  height: 30%;
 }
 
 /* LANDSCAPE LAYOUT //////////////////////////////////////// */
