@@ -511,11 +511,14 @@ h3 {
   font-size: calc(var(--w)/20);
 }
 
-.social-media-row a {
+.social-media-section p {
+  font-size: calc(var(--w)/30);
+  text-align: center;
 }
 
-.social-media-icon {
-  width: 7%;
+.social-media-section p a {
+  display: inline;
+  text-decoration: underline;
 }
 
 /* RON DALLOWAY --------------------------------------------- */
