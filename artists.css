@@ -697,6 +697,7 @@ h3 {
   #background {
     background-size: 100%;
     filter: brightness(20%);
+    height: 100%;
   }
   /* SITE HEADER --------------------------------- */
   #site-header {
@@ -728,7 +729,6 @@ h3 {
     padding: 1% 5% 5% 5%;
     flex-direction: row;
     flex-wrap: wrap;
-    /* border: 1px solid red; */
   }
 
   #chapter-nav li {
@@ -742,7 +742,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: calc(var(--w)/200) solid rgb(255, 234, 204);
+    border: calc(var(--w)/500) solid rgb(255, 234, 204);
     background-color: hsla(0, 0%, 0%, 0.3);
   }
 
@@ -762,14 +762,14 @@ h3 {
     height: 65%;
   }
   
-  h3, #rondalloway h3, #kamilahhaywood h3 {
+  h3 {
     top: 70%;
     left: 0%;
     width: 100%;
     font-size: calc(var(--w)/20);
   }
   
-  .skill-set, #rondalloway .skill-set, #kamilahhaywood .skill-set {
+  .skill-set {
     left: 0%;
     width: 100%;
     font-size: calc(var(--w)/30);
@@ -804,8 +804,8 @@ h3 {
   }
 
   #rondalloway .artist-bio {
-    height: 100%;
-    top: 0%;
+    height: 90%;
+    top: 5%;
   }
 
   /* KAMILAH HAYWOOD ----------------------------------------- */
