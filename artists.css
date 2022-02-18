@@ -291,16 +291,6 @@ strong {
   }
 }
 
-/* TABLET ////////////////////////////// */
-@media only screen and (min-width: 600px) {
-
-}
-
-/* LAPTOP / DESKTOP //////////////////////////// */
-@media only screen and (min-width: 1025px) {
-
-}
-
 /* FONTS //////////////////////////////////////// */
 @font-face {
   font-family: 'Coolvetica-Regular';
@@ -334,36 +324,6 @@ a:hover, a:focus {
   color:hsl(150, 100%, 50%);
 }
 
-/* ARROW-LINKS -------------------------------------- */
-.vertical-arrow-link {
-  border:calc(var(--w)/300) solid rgb(255, 234, 204);
-  width: 20%;
-  text-align: center;
-  left: 40%;
-  line-height: 1.2;
-  border-radius: calc(var(--w)/30);
-  background-color: black;
-  font-size: calc(var(--w)/20);
-  transition-property: color, background-color, border-color;
-  transition-timing-function: ease-out;
-  transition-duration: 1s;
-}
-
-.down-vertical-arrow-link {
-  top: 95%;
-}
-
-.up-vertical-arrow-link {
-  top: 1%;
-}
-
-.vertical-arrow-link:hover, .vertical-arrow-link:focus {
-  color: hsl(150, 100%, 70%);
-  border-color: hsl(150, 100%, 50%);
-  background-color: hsl(150, 100%, 5%);
-  /* outline: calc(var(--w)/150)solid hsl(150, 100%, 80%); */
-}
-
 /* PAGE-LINKS ////////////////////////////////////////////// */
 .page-link {
   text-align: center;
@@ -378,11 +338,20 @@ a:hover, a:focus {
 /* HEADER ///////////////////////////////////// */
 
 /* SITE HEADER ------------------------------------------ */
+#site-header-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#gutter1-copy {
+  width: var(--gw);
+  height: var(--gh);
+}
+
 #site-header {
   position: relative;
-  height: 20%;
+  height: calc(var(--w)/3);
   width: var(--w);
-  left: var(--gw);
   border-bottom: calc(var(--w)/100) solid rgb(255, 234, 204);
   /* scroll-snap-align: start; */
   background-image: linear-gradient(
@@ -390,6 +359,8 @@ a:hover, a:focus {
     hsl(45, 80%, 50%),
     hsl(120, 30%, 70%)
   );
+  display:flex;
+  justify-content: center;
 }
 
 h1 {
@@ -430,6 +401,10 @@ h1 {
 }
 
 /* CHAPTER HEADER -------------------------------------------- */
+#push-down {
+  height: 30%;
+}
+
 h2 {
   padding: 5%;
   font-size: calc(var(--w)/6);
@@ -668,6 +643,7 @@ h3 {
   /* SITE HEADER --------------------------------- */
   #site-header {
     border-bottom-width: calc(var(--w)/200);
+    height: calc(var(--w)/7);
   }
 
   h1 {
@@ -682,7 +658,6 @@ h3 {
   /* CHAPTER HEADER ----------------------------------- */
   h2 {
     font-size: calc(var(--w)/11);
-    top: 25%;
   }
 
   /* ARTISTS /////////////////////////////////////////////// */
@@ -787,6 +762,7 @@ h3 {
 
   #susanameza .skill-set {
     top: 75%;
+    left: 30%;
   }
 
 
