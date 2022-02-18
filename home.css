@@ -18,7 +18,21 @@ main {
 }
 
 #background-pic {
-    background-image: url("./assets/images/home-page.jpg");
+  background-image: url("./assets/images/home-page-small.jpg");
+}
+@media only screen and (min-width: 601px) and (max-width: 1920px) {
+  #background-pic {
+    background-image: url("./assets/images/home-page-medium.jpg");
+  }
+}
+@media only screen and (min-width: 1921px) {
+  #background-pic {
+    background-image: url("./assets/images/home-page-large.jpg");
+  }
+}
+
+
+#background-pic {
     background-size: 100%;
     background-position: 50%;
     background-repeat: no-repeat;
