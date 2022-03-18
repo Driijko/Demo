@@ -98,7 +98,7 @@ body {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
@@ -121,6 +121,10 @@ body {
   height: var(--h);
 }
 
+i {
+  font-style: italic;
+}
+
 /* CONTENT ////////////////////////////////////////////// */
 /* FONTS //////////////////////////////////// */
 @font-face {
@@ -131,6 +135,10 @@ body {
 }
 
 /* GENERAL ------------------------------------------ */
+#page1 {
+  /* display: none; */
+}
+
 #fixed-layer {
   background-image: url("./assets/images/project-statement-small.jpg");
   background-size: 150%;
@@ -159,6 +167,10 @@ body {
   width: 35%;
   height: 4%;
   display: block;
+  position: relative;
+}
+
+#page1 .page-link {
   position: absolute;
   bottom: 5%;
 }
@@ -269,6 +281,43 @@ h2 {
   font-size: calc(var(--w)/15);
 }
 
+/* STATEMENT ------------------------------------------------------- */
+#page2 .ur {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: calc(var(--w)/20);
+  line-height: 1.2;
+}
+
+#covid-info {
+  font-weight: bold;
+}
+
+#covid-info a {
+  text-decoration: underline;
+  color: hsl(150, 100%, 50%);
+}
+
+/* DIRECTIONS -------------------------------------------------------- */
+#page3 h3 {
+  padding-top: 5%;
+  font-size: calc(var(--w)/10);
+  font-weight: bold;
+}
+
+#page3 h4 {
+  padding-top: 5%;
+  font-size: calc(var(--w)/15);
+  font-weight: bold;
+}
+
+#page3 p {
+  padding-top: 2%;
+  font-size: calc(var(--w)/20);
+  line-height: 1.3;
+}
+
 @media only screen and (orientation: landscape) {
   /* GENERAL ----------------------------------------------- */
   #fixed-layer {
@@ -277,6 +326,19 @@ h2 {
 
   .ur {
     padding: 0% 2%;
+  }
+
+  /* PAGE-LINK ---------------------------------------------------- */
+  .page-link {
+    right: 0%;
+    font-size: calc(var(--w)/40);
+    width: 17%;
+    height: 5%;
+    bottom: 0%;
+  }
+
+  .page-link svg {
+    top: 5%;
   }
 
   /* SITE HEADER --------------------------------------------------- */
@@ -320,5 +382,21 @@ h2 {
 
   #hours h3 {
     font-size: calc(var(--w)/30);
+  }
+
+  #page2 .ur {
+    font-size: calc(var(--w)/40);
+  }
+
+  #page3 h3 {
+    font-size: calc(var(--w)/15);
+  }
+
+  #page3 h4 {
+    font-size: calc(var(--w)/20);
+  }
+
+  #page3 p {
+    font-size: calc(var(--w)/35);
   }
 }
