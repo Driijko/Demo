@@ -143,7 +143,7 @@ i {
   background-image: url("./assets/images/project-statement-small.jpg");
   background-size: 150%;
   background-position: 50% 50%;
-  filter: brightness(0.7);
+  filter: brightness(0.5);
 }
 
 .ur {
