@@ -1,0 +1,139 @@
+main {
+  height: 65vh;
+
+  box-sizing: border-box;
+  padding-top: 15vh;
+
+  opacity: 0.9;
+}
+
+@keyframes fade-in {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.fade-in-content {
+  animation: fade-in 5s 3s forwards;
+  opacity: 0;
+}
+
+#background-pic {
+  background-image: url("./assets/images/home-page.jpg");
+  background-size: 100%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 15vh;
+  height: 85vh;
+  width: 100vw;
+  opacity: 0;
+  animation: fade-in 5s forwards;
+}
+
+/* NAV SECTION //////////////////////////////////////////////////// */
+nav ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  height: 40vh;
+  font-family: "Roboto Condensed";
+}
+
+nav a {
+  width: 100vw;
+  background-color: black;
+  color: hsl(35, 100%, 90%);
+
+  font-size: 2vw;
+  font-size: clamp(2.5rem, 1.5000rem + 1.5625vw, 4rem);
+  display: inline-block;
+  transition: color 2s;
+}
+
+nav a:hover, nav a:focus {
+  color: hsl(0, 100%,50%);
+}
+
+/* FOOTER //////////////////////////////////////// */
+footer {
+  height: 20vh;
+  display: flex;
+  background-color: hsl(50, 100%, 0%);
+}
+
+/* MYSEUM LOGO //////////////////////////////////////////// */
+#myseum-logo {
+  object-fit: contain;
+  width: 50%;
+  height: 100%;
+
+  background-color: hsla(50, 100%, 90%, 1);
+}
+
+#insta-logo {
+  display: flex;
+  width: 50%;
+
+  justify-content: center;
+  align-items: center;
+  
+  
+  text-align: center;
+
+  font-size: 1vw;
+  font-size: clamp(1rem, -0.3333rem + 2.0833vw, 3rem);
+
+  color: white;
+}
+
+#insta-logo i {
+  padding-left: 5%;
+  font-size: 4vw;
+  font-size: clamp(4rem, 2.6667rem + 2.0833vw, 6rem);
+}
+
+#insta-logo:hover, #insta-logo:focus {
+  color: hsl(0, 100%, 70%);
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+      height: 55vh;
+  }
+
+  #background-pic {
+      background-size: cover;
+      height: 55vh;
+  }
+
+  nav ul {
+    height: 30vh;
+  }
+
+  nav a {
+      font-size: clamp(1.5rem, 0.3636rem + 5.6818vw, 4rem);
+  }
+
+  footer {
+      height: 30vh;
+      flex-direction: column;
+  }
+
+  #myseum-logo {
+      width: 100%;
+      height: 50%;
+  }
+
+  #insta-logo {
+      width: 100%;
+      height: 50%;
+      font-size: clamp(0.8rem, 0.2545rem + 2.7273vw, 2rem);
+  }
+
+  #insta-logo i {
+      font-size: clamp(2rem, 1.0909rem + 4.5455vw, 4rem);
+  }
+}

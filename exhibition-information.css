@@ -1,0 +1,239 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a:focus {
+  outline: none;
+}
+
+/* CSS TOOLS /////////////////////////////////////////////// */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  height: 100%;
+  -ms-overflow-style: none;
+  overflow: hidden;
+  overflow: -moz-scrollbars-none; 
+  color: hsl(35, 100%, 90%);
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/* Chrome and Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  /* Prevent address bar from disappearing on mobile. */
+  position: fixed;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+#fixed-layer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#msc {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.vp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  /* This allows us to use rows properly as otherwise
+  these divs will shrink down. */
+  flex: none;
+}
+
+.ur {
+  position: relative;
+  width: var(--w);
+  height: var(--h);
+}
+
+/* CONTENT ////////////////////////////////////////////// */
+/* FONTS //////////////////////////////////// */
+@font-face {
+  font-family: 'Coolvetica-Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Coolvetica-Regular'), url('./assets/fonts/coolvetica.woff') format('woff');
+}
+
+/* GENERAL ------------------------------------------ */
+#fixed-layer {
+  background-image: url("./assets/images/project-statement-small.jpg");
+  background-size: 150%;
+  background-position: 50% 50%;
+}
+
+.ur {
+  padding: 0% 5%;
+}
+@media only screen and (min-width: 601px) and (max-width: 1920px) {
+  #fixed-layer {
+    background-image: url("./assets/images/project-statement-medium.jpg");
+  }
+}
+@media only screen and (min-width: 1921px) {
+  #fixed-layer {
+    background-image: url("./assets/images/project-statement-large.jpg");
+  }
+}
+
+/* SITE HEADER ----------------------------------------------------- */
+header {
+  width: 100%;
+  height: 15%;
+  position: absolute;
+  top: 0;
+  background-image: linear-gradient(
+    hsl(120, 30%, 70%),
+    hsl(45, 80%, 50%)
+  );
+  border-bottom: calc(var(--w)/100) solid hsl(35, 100%, 90%);
+}
+
+h1 {
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  font-family: "Coolvetica-Regular", sans-serif;
+  font-size: calc(var(--w)/14);
+  text-align: center;
+}
+
+nav {
+  position: absolute;
+  width: 100%;
+  bottom: 5%;
+}
+
+nav ul {
+  height: 100%;
+  display: flex;
+  font-size: calc(var(--w)/20);
+  justify-content: space-evenly;
+}
+
+nav li {
+  padding-top: 4%;
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+}
+
+nav a:hover, nav a:focus {
+  transform: scale(150%);
+}
+
+/* CHAPTER HEADER ------------------------------------------ */
+#page1 .ur {
+  padding-top: 30%;
+}
+
+#main-title {
+  font-size: calc(var(--w)/13);
+}
+
+h2 {
+  text-align: center;
+  font-size: calc(var(--w)/19);
+  line-height: 1.3;
+}
+
+@media only screen and (orientation: landscape) {
+  /* GENERAL /////////////////////////////////////////////// */
+  #fixed-layer {
+    background-size: 100%;
+  }
+
+  /* HEADER //////////////////////////////////////////////// */
+  header {
+    height: 20%;
+    border-width: calc(var(--w)/200);
+  }
+
+  h1 {
+    font-size: calc(var(--w)/20);
+  }
+
+  nav ul {
+    font-size: calc(var(--w)/40);
+  }
+}
