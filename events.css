@@ -283,13 +283,14 @@ h3 {
 }
 
 #health-and-harm-reduction-workshop h3 {
-    font-size: calc(var(--w)/12);
+    font-size: calc(var(--w)/15);
     top: 8%
 }
 
 #health-and-harm-reduction-workshop .sub-title {
     left: 3%;
-    top: 20%
+    top: 20%;
+    font-size: calc(var(--w)/20);
 }
 
 #health-and-harm-reduction-workshop .venue {
