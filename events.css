@@ -361,6 +361,9 @@ h3 {
     .desktop {
         display: initial
     }
+    .ur {
+      border: none;
+    }
     h3 {
         font-size: calc(var(--w)/25);
         line-height: 1.2
