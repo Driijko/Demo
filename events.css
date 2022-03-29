@@ -54,7 +54,12 @@ i {
     display: flex;
     overflow-x: scroll;
     scroll-behavior: smooth;
-    scrollbar-width: none
+    scrollbar-width: none;
+    border-top: calc(var(--w)/300) solid white;
+}
+
+.vp {
+  border-top: calc(var(--w)/300) solid white;
 }
 
 .ch2 {
