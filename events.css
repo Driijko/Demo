@@ -55,10 +55,9 @@ i {
     overflow-x: scroll;
     scroll-behavior: smooth;
     scrollbar-width: none;
-    border-top: calc(var(--w)/300) solid white;
 }
 
-.vp {
+.ur {
   border-top: calc(var(--w)/300) solid white;
 }
 
