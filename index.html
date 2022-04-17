@@ -26,7 +26,6 @@
   <meta property="og:url" content="" />         
 
   <!-- CSS //////////////////////////////////////////// -->
-  <script src="script.js"></script>
   <link rel="stylesheet" type="text/css" href="./reset.css" />
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <link rel="stylesheet" type="text/css" href="./test.css" />
@@ -38,16 +37,15 @@
 
 </head>
 <body>
-  <div id="msc">
-    <div class="vp">
-      <img src="./pic1.jpg" />
-    </div>
-    <div class="vp">
-      <img src="./pic2.png" />
-    </div>
-    <div class="vp">
-      <img src="./pic3.jpg" />
+  <div class="expander-container">
+    <input type="checkbox" id="expander-toggle-1" class="expander-toggle"/>
+    <label for="expander-toggle-1" class="expander-toggle-label">CLICK ME</label>
+    <div class="expander">
+      <div class="stable-content">
+        <p>HELLO!</p>
+      </div>
     </div>
   </div>
 </body>
+<script src="script.js"></script>
 </html>

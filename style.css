@@ -1,3 +1,4 @@
+/* GENERAL /////////////////////////////////////////////////// */
 * {
   box-sizing: border-box;
 }
@@ -32,6 +33,7 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+/* LAYOUT ////////////////////////////////////////////////// */
 #fixed-layer {
   position: fixed;
   width: 100%;
@@ -41,20 +43,34 @@ body {
   align-items: center;
 }
 
-#gutter1, #gutter2 {
+.gutter {
   position: absolute;
-  width: var(--gw);
-  height: var(--gh);
+  width: calc(var(--gw) * 1px);
+  height: calc(var(--gh) * 1px);
 }
 
-#gutter1 {
-  left: 0;
+.vg {
+  display: var(--vg);
+}
+
+.hg {
+  display: var(--hg);
+}
+
+.gutter-top {
   top: 0;
 }
 
-#gutter2 {
+.gutter-right {
   right: 0;
+}
+
+.gutter-bottom {
   bottom: 0;
+}
+
+.gutter-left {
+  left: 0;
 }
 
 /* Main Scrolling Container */
@@ -65,6 +81,18 @@ body {
   height: 100%;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.row {
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
@@ -84,36 +112,27 @@ body {
 
 .ur {
   position: relative;
-  width: var(--w);
-  height: var(--h);
+  width: calc(var(--w) * 1px);
+  height: calc(var(--h) * 1px);
 }
 
 .abs {
   position: absolute;
 }
 
+/* STYLING //////////////////////////////////////////// */
 i {
   font-style: italic;
   padding-right: 0.5ch;
 }
 
+/* MOBILE / DESKTOP BINARY ///////////////////////////////// */
 .desktop {
   display: none;
 }
 
 
-.row {
-  width: 100%;
-  height: 100%;
-  scroll-snap-align: start;
-  scroll-snap-type: x mandatory;
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-}
-
+/* CRUNCHERS /////////////////////////////////////////// */
 .ch2 {
   width: 200%;
   height: 100%;
@@ -177,6 +196,71 @@ i {
   justify-content: center;
   align-items: center;
 }
+
+/* EXPANDERS /////////////////////////////////////// */
+.expander {
+  width:0;
+  height:0;
+  overflow:hidden;
+  transition: width 1s, height 1s;
+}
+
+.expander-toggle {
+  -webkit-appearance: none;
+  appearance: none;
+  /* width: 0; */
+  /* height: 0; */
+  margin: 0;
+  display: inline;
+}
+
+.expander-toggle-label {
+
+}
+
+.expander-toggle:checked ~ .expander {
+  /* height: 80%; */
+  /* width: 80%; */
+}
+
+/* Give this component specific dimensions and position absolute
+so that it's interior content is not affected by changes in the
+expander component. Put any stylings here that you want to be
+consistent independenly of transitions. */
+.stable-content {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+}
+
+/* FOR EXPANDER TRANSITIONS //////////////////////////// */
+/* Styles we want when expander is open. */
+.expander-toggle:checked ~ .expander .stable-content {
+
+}
+
+/* Styles we want when expander is closed. */
+.expander-toggle:not(:checked) ~ .expander .stable-content {
+
+}
+/* //////////////////////////////////////////////////////// */
+
+.open-label {
+  display: none;
+}
+
+.closed-label {
+  display: inline;
+}
+
+.expander-toggle:checked ~ .expander-toggle-label .open-label {
+  display: inline;
+}
+
+.expander-toggle:checked ~ .expander-toggle-label .closed-label {
+  display: none;
+}
+
 
 /* BACKGROUND IMAGE RESIZING */
 /* Mobile first, followed by... */
