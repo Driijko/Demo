@@ -29,7 +29,7 @@
   <script src="basicLayout.js"></script>
   <link rel="stylesheet" type="text/css" href="./reset.css" />
   <link rel="stylesheet" type="text/css" href="./style.css" />
-  <link rel="stylesheet" type="text/css" href="./test.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="./test.css" /> -->
 
   <!-- GOOGLE FONTS ///////////////// -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,15 +38,15 @@
 
 </head>
 <body>
-  <div class="column">
+  <div tabindex="-1" id="page-start" class="row"   >
     <div class="vp">1</div>
-    <div class="row">
+    <div tabindex="-1" class="column" autofocus>
       <div class="vp">2-1</div>
       <div class="vp">2-2</div>
       <div class="vp">2-3</div>
     </div>
     <div class="vp">3</div>
   </div>
-
 </body>
+<script src="pageStart.js"></script>
 </html>

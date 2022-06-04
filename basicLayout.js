@@ -42,7 +42,7 @@ function layout () {
       document.documentElement.style.setProperty("--hg", "none");
     }
     else {
-      let width = vh * 100 * 1.6;
+      let width = window.innerHeight * 1.6;
       document.documentElement.style.setProperty("--h", window.innerHeight);
       document.documentElement.style.setProperty("--w", width);
       document.documentElement.style.setProperty("--wpx", `${width}px`);
