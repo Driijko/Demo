@@ -1,8 +1,5 @@
 function layout () {
-  // Redefine 'vh' in CSS based on what's actually available (excluding address bar).
-  // let vh = window.innerHeight * 0.01;
-  // document.documentElement.style.setProperty('--vh', `${vh}px`);
-  document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`);
+  // document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`);
 
 
   // Determine what orientation device has.
