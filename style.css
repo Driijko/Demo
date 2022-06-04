@@ -75,8 +75,8 @@ body {
 
 /* Main Scrolling Container */
 #msc {
-  position: absolute;
-  top: 0;
+  /* position: absolute; */
+  /* top: 0; */
   width: 100%;
   height: 100%;
   overflow-y: scroll;
@@ -85,9 +85,20 @@ body {
   scrollbar-width: none;
 }
 
+.column {
+  width: 100vw;
+  height: var(--vh);
+  overflow-y: scroll;
+  scroll-snap-align: start;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  flex: none;
+}
+
 .row {
-  /* width: 200%; */
-  height: 100%;
+  width: 100vw;
+  height: var(--vh);
   scroll-snap-align: start;
   scroll-snap-type: x mandatory;
   display: flex;
