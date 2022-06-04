@@ -113,7 +113,9 @@ body {
   scroll-behavior: initial;
 }
 
-
+a:focus {
+  color: blue;
+}
 
 /* Viewport Div */
 .vp {
