@@ -123,12 +123,32 @@ body {
   scroll-behavior: auto;
 }
 
-.cruncher, .row-cruncher {
+/* .cruncher, .row-cruncher {
   width: 100%;
   height: 100%;
   flex: none;
   scroll-snap-align: start;
-  /* border: 10px solid blue; */
+}
+
+.cruncher {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.row-cruncher {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  display: flex;
+} */
+
+.cv2 {
+  scroll-snap-align: start;
+}
+
+.cvi2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* PORTRAIT LAYOUT /////////////////////////////////////////// */
@@ -137,24 +157,9 @@ body {
     display: none;
   }
 
-  .cruncher {
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-  }
-
-  .row-cruncher {
-    width: 100%;
-    height: 100%;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    display: flex;
-  }
-
   .cv2 {
-    width: 100vw;
-    height: calc(var(--vh) * 2px);
+    width: 100%;
+    height: 200%;
     scroll-snap-type: y mandatory;
   }
   
@@ -187,15 +192,17 @@ body {
 @media only screen and (orientation: landscape) {
   .cruncher .vp, .row-cruncher .vp {
     position: absolute;
+    top: 0;
+    /* left: 0; */
     pointer-events: none;
   }
 
-  .cruncher .vp a, .row-cruncher .vp a {
+  /* .cruncher .vp a, .row-cruncher .vp a {
     pointer-events: initial;
-  }
+  } */
 
   .cv2, .cv3 {
-    height: var(--vh);
+    height: 100%;
     position: relative;
   }
 
