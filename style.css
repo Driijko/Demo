@@ -31,6 +31,7 @@ body {
   position: fixed;
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
+  border: 4px solid red;
 }
 
 /* LAYOUT ////////////////////////////////////////////////// */
@@ -86,7 +87,7 @@ body {
 }
 
 .row {
-  width: 100%;
+  /* width: 200%; */
   height: 100%;
   scroll-snap-align: start;
   scroll-snap-type: x mandatory;
@@ -95,6 +96,7 @@ body {
   overflow-y: hidden;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  /* border: 4px solid red; */
 }
 
 /* Viewport Div */
@@ -110,14 +112,165 @@ body {
   flex: none;
 }
 
+.vp {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  /* This allows us to use rows properly as otherwise
+  these divs will shrink down. */
+  flex: none;
+  /* border: 4px solid green; */
+}
+
 .ur {
   position: relative;
   width: calc(var(--w) * 1px);
   height: calc(var(--h) * 1px);
 }
 
-.abs {
-  position: absolute;
+/* PORTRAIT LAYOUT /////////////////////////////////////////// */
+@media only screen and (orientation: portrait) {
+  .landscape {
+    display: none;
+  }
+
+  .cv2 {
+    width: 100%;
+    height: 200%;
+    scroll-snap-type: y mandatory;
+  }
+  
+  .cvi2 {
+    width: 100%;
+    height: 50%;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cv3 {
+    width: 100%;
+    height: 300%;
+    scroll-snap-type: y mandatory;
+  }
+  
+  .cvi3 {
+    width: 100%;
+    height: 33.3333%;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* LANDSCAPE LAYOUT /////////////////////////////////////// */
+@media only screen and (orientation: landscape) {
+  .cv2, .cv3 {
+    height: 100%;
+    position: relative;
+  }
+
+  .cvi2, .cvi3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .cvi2 a, .cvi3 a {
+    pointer-events: initial;
+  }
+
+  .portrait {
+    display: none;
+  }
+}
+
+/* INTERFACE //////////////////////////////////////////////////// */
+.inline-link {
+  display: inline;
+  text-decoration: underline;
+}
+
+/* EXPANDERS -------------------------------------------------- */
+.expander {
+  width:0;
+  height:0;
+  overflow:hidden;
+  transition: width 1s, height 1s;
+  border: 4px solid red;
+}
+
+.expander-toggle {
+  -webkit-appearance: none;
+  appearance: none;
+  /* width: 0; */
+  /* height: 0; */
+  margin: 0;
+  display: inline;
+}
+
+.expander-toggle-label {
+
+}
+
+.expander-toggle:checked ~ .expander {
+  /* height: 500px;
+  width: 500px; */
+}
+
+/* Give this component specific dimensions and position absolute
+so that it's interior content is not affected by changes in the
+expander component. Put any stylings here that you want to be
+consistent independenly of transitions. */
+.stable-content {
+  position: relative;
+  /* width: 500px;
+  height: 500px; */
+}
+
+/* FOR EXPANDER TRANSITIONS ---------------------------------- */
+/* Styles we want when expander is open. */
+.expander-toggle:checked ~ .expander .stable-content {
+
+}
+
+/* Styles we want when expander is closed. */
+.expander-toggle:not(:checked) ~ .expander .stable-content {
+
+}
+
+.open-label {
+  display: none;
+}
+
+.closed-label {
+  display: inline;
+}
+
+.expander-toggle:checked ~ .expander-toggle-label .open-label {
+  display: inline;
+}
+
+.expander-toggle:checked ~ .expander-toggle-label .closed-label {
+  display: none;
+}
+
+/* IN-PAGE NAVIGATION ---------------------------------------- */
+.in-page:focus-visible {
+
+}
+
+@media (hover: hover) {
+  .in-page:hover {
+
+  }
 }
 
 /* STYLING //////////////////////////////////////////// */
@@ -126,10 +279,6 @@ i {
   padding-right: 0.5ch;
 }
 
-/* MOBILE / DESKTOP BINARY ///////////////////////////////// */
-.desktop {
-  display: none;
-}
 
 
 /* CRUNCHERS /////////////////////////////////////////// */
@@ -167,99 +316,9 @@ i {
   align-items: center;
 }
 
-.cv2 {
-  width: 100%;
-  height: 200%;
-  scroll-snap-type: y mandatory;
-}
 
-.cvi2 {
-  width: 100%;
-  height: 50%;
-  scroll-snap-align: start;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.cv3 {
-  width: 100%;
-  height: 300%;
-  scroll-snap-type: y mandatory;
-}
 
-.cvi3 {
-  width: 100%;
-  height: 33.3333%;
-  scroll-snap-align: start;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* EXPANDERS /////////////////////////////////////// */
-.expander {
-  width:0;
-  height:0;
-  overflow:hidden;
-  transition: width 1s, height 1s;
-}
-
-.expander-toggle {
-  -webkit-appearance: none;
-  appearance: none;
-  /* width: 0; */
-  /* height: 0; */
-  margin: 0;
-  display: inline;
-}
-
-.expander-toggle-label {
-
-}
-
-.expander-toggle:checked ~ .expander {
-  /* height: 80%; */
-  /* width: 80%; */
-}
-
-/* Give this component specific dimensions and position absolute
-so that it's interior content is not affected by changes in the
-expander component. Put any stylings here that you want to be
-consistent independenly of transitions. */
-.stable-content {
-  position: absolute;
-  width: 500px;
-  height: 500px;
-}
-
-/* FOR EXPANDER TRANSITIONS //////////////////////////// */
-/* Styles we want when expander is open. */
-.expander-toggle:checked ~ .expander .stable-content {
-
-}
-
-/* Styles we want when expander is closed. */
-.expander-toggle:not(:checked) ~ .expander .stable-content {
-
-}
-/* //////////////////////////////////////////////////////// */
-
-.open-label {
-  display: none;
-}
-
-.closed-label {
-  display: inline;
-}
-
-.expander-toggle:checked ~ .expander-toggle-label .open-label {
-  display: inline;
-}
-
-.expander-toggle:checked ~ .expander-toggle-label .closed-label {
-  display: none;
-}
 
 
 /* BACKGROUND IMAGE RESIZING */
@@ -278,18 +337,7 @@ consistent independenly of transitions. */
 
 /* DESKTOP ////////////////////////////////////////////// */
 @media only screen and (orientation: landscape) {
-  .cv2, .cv3 {
-    height: 100%;
-    position: relative;
-  }
 
-  .cvi2, .cvi3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    pointer-events: none;
-  }
 
   .ch2, .ch3 {
     width: 100%;
