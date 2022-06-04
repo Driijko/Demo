@@ -81,6 +81,7 @@ body {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  flex: none;
 }
 
 .row {
@@ -93,6 +94,7 @@ body {
   overflow-y: hidden;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  flex: none;
 }
 
 /* Viewport Div */
@@ -107,6 +109,7 @@ body {
   /* This allows us to use rows properly as otherwise
   these divs will shrink down. */
   border: 10px solid green;
+  flex: none;
 }
 
 .ur {
@@ -120,8 +123,12 @@ body {
   scroll-behavior: auto;
 }
 
-.vp, .cruncher, .row-cruncher, .column, .row {
+.cruncher, .row-cruncher {
+  width: 100%;
+  height: 100%;
   flex: none;
+  scroll-snap-align: start;
+  /* border: 10px solid blue; */
 }
 
 /* PORTRAIT LAYOUT /////////////////////////////////////////// */
