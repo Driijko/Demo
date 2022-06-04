@@ -81,7 +81,6 @@ body {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  flex: none;
 }
 
 .row {
@@ -107,7 +106,6 @@ body {
   scroll-snap-align: start;
   /* This allows us to use rows properly as otherwise
   these divs will shrink down. */
-  flex: none;
   border: 10px solid green;
 }
 
@@ -120,6 +118,10 @@ body {
 
 #page-start {
   scroll-behavior: auto;
+}
+
+.vp, .cruncher, .row-cruncher, .column, .row {
+  flex: none;
 }
 
 /* PORTRAIT LAYOUT /////////////////////////////////////////// */
