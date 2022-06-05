@@ -1,9 +1,21 @@
-const vps = document.getElementsByClassName("vp");
-for (const vp of vps) {
-  vp.addEventListener("pointerdown", ()=> {
-    vp.querySelector(".nav-layer").style.visibility = "visible";
+const nlts = document.getElementsByClassName("nav-layer-trigger");
+for (const nlt of nlts) {
+  function iterateToNavLayer () {
+    let test = nlt.nextElementSibling;
+    while (test) {
+      if (test.className === "nav-layer") {
+        break;
+      }
+      else {
+        test = test.nextElementSibling;
+      }
+    }
+    return test;
+  }
+  nlt.addEventListener("pointerdown", ()=> {
+    iterateToNavLayer().style.visibility = "visible";
   });
-  vp.addEventListener("pointerup", ()=> {
-    vp.querySelector(".nav-layer").style.visibility ="hidden";
+  nlt.addEventListener("pointerup", ()=> {
+    iterateToNavLayer().style.visibility = "hidden";
   });
 }

@@ -117,6 +117,7 @@ body {
   width: calc(var(--w) * 1px);
   height: calc(var(--h) * 1px);
   background-color: white;
+  pointer-events: none;
 }
 
 #page-start {
@@ -240,9 +241,20 @@ body {
 }
 
 /* INTERFACE //////////////////////////////////////////////////// */
+a, button, input {
+  pointer-events: initial;
+}
+
 .inline-link {
   display: inline;
   text-decoration: underline;
+}
+
+.nav-layer-trigger {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: purple;
 }
 
 .nav-layer {
@@ -252,6 +264,12 @@ body {
   background-color: hsla(0, 100%, 50%, 0.5);
   pointer-events: none;
   visibility: hidden;
+}
+
+#special {
+  width: 50%;
+  height: 20%;
+  background-color: yellow;
 }
 
 /* @media (pointer: fine) {
