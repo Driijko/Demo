@@ -15,7 +15,8 @@ for (const nlt of nlts) {
   nlt.addEventListener("pointerdown", ()=> {
     iterateToNavLayer().style.visibility = "visible";
   });
-  nlt.addEventListener("pointerup", ()=> {
+  nlt.addEventListener("pointerout", ()=> {
     iterateToNavLayer().style.visibility = "hidden";
   });
+  
 }
