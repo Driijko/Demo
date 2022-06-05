@@ -34,14 +34,14 @@ body {
 }
 
 /* LAYOUT ////////////////////////////////////////////////// */
-/* #fixed-layer {
+#fixed-layer {
   position: fixed;
-  width: 100vw;
-  height: var(--vh);
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-} */
+}
 
 .gutter {
   position: absolute;
@@ -108,7 +108,7 @@ body {
   scroll-snap-align: start;
   /* This allows us to use rows properly as otherwise
   these divs will shrink down. */
-  border: 10px solid green;
+  background-color: black;
   flex: none;
 }
 
@@ -116,36 +116,14 @@ body {
   position: relative;
   width: calc(var(--w) * 1px);
   height: calc(var(--h) * 1px);
-  border: 4px solid red;
+  background-color: white;
 }
 
 #page-start {
   scroll-behavior: auto;
 }
 
-/* .cruncher, .row-cruncher {
-  width: 100%;
-  height: 100%;
-  flex: none;
-  scroll-snap-align: start;
-}
-
-.cruncher {
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-}
-
-.row-cruncher {
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  display: flex;
-} */
-
-.cv2 {
-  scroll-snap-align: start;
-}
-
-.cvi2 {
+.cvi2, .cvi3, .chi2, .chi3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,64 +135,102 @@ body {
     display: none;
   }
 
+  /* CRUNCHERS ----------------------------------------- */
   .cv2 {
     width: 100%;
     height: 200%;
-    scroll-snap-type: y mandatory;
   }
   
   .cvi2 {
     width: 100%;
     height: 50%;
     scroll-snap-align: start;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   
   .cv3 {
     width: 100%;
     height: 300%;
-    scroll-snap-type: y mandatory;
   }
   
   .cvi3 {
     width: 100%;
     height: 33.3333%;
     scroll-snap-align: start;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  }
+
+  .ch2 {
+    width: 200%;
+    height: 100%;
+  }
+
+  .chi2 {
+    width: 50%;
+    height: 100%;
+    scroll-snap-align: start;
+  }
+
+  .ch3 {
+    width: 300%;
+    height: 100%;
+  }
+
+  .chi3 {
+    width: 33.33333%;
+    height: 100%;
+    scroll-snap-align: start;
+  }
+
+  /* NAV-LAYER ------------------------------------ */
+  .nl-top, .nl-bottom {
+    width: 100%;
+    height: calc(var(--wpx)/3);
+  }
+
+  .nl-bottom {
+    bottom: 0;
+  }
+
+  .nl-right, .nl-left {
+    height: 100%;
+    width: calc(var(--wpx)/3);
+    flex-direction: column;
+  }
+
+  .nl-right {
+    right: 0;
+  }
+
+  .nl-top a, .nl-bottom a {
+    width: calc(var(--wpx)/4);
+    height: 100%;
+  }
+
+  .nl-right a, .nl-left a {
+    height: calc(var(--wpx)/4);
+    width: 100%;
   }
 }
 
 /* LANDSCAPE LAYOUT /////////////////////////////////////// */
 @media only screen and (orientation: landscape) {
-  .cruncher .vp, .row-cruncher .vp {
-    position: absolute;
-    top: 0;
-    /* left: 0; */
-    pointer-events: none;
-  }
 
-  /* .cruncher .vp a, .row-cruncher .vp a {
-    pointer-events: initial;
-  } */
-
-  .cv2, .cv3 {
+  .cv2, .cv3, .ch2, .ch3 {
+    scroll-snap-align: start;
+    width: 100%;
     height: 100%;
     position: relative;
   }
 
-  .cvi2, .cvi3 {
+  .cvi2, .cvi3, .chi2, .chi3 {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
     height: 100%;
     pointer-events: none;
   }
 
-  .cvi2 a, .cvi3 a {
+  .cvi2 a, .cvi3 a, .chi2 a, .chi3 a {
     pointer-events: initial;
   }
 
@@ -227,6 +243,36 @@ body {
 .inline-link {
   display: inline;
   text-decoration: underline;
+}
+
+.nav-layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: hsla(0, 100%, 50%, 0.5);
+}
+
+@media (pointer: none) and (pointer:coarse) {
+  .nav-layer {
+    pointer-events: none;
+    background-color: hsla(220, 100%, 40%, 0.5);
+  }
+}
+
+.nav-layer div {
+  position: absolute;
+  border: 4px solid blue;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-layer a {
+  border: 4px solid green;
+}
+
+.nav-layer svg {
+  width: 100%;
+  height: 100%;
 }
 
 /* EXPANDERS -------------------------------------------------- */
@@ -313,7 +359,7 @@ i {
 
 
 /* CRUNCHERS /////////////////////////////////////////// */
-.ch2 {
+/* .ch2 {
   width: 200%;
   height: 100%;
   scroll-snap-type: x mandatory;
@@ -345,7 +391,7 @@ i {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 
 
