@@ -1,4 +1,5 @@
 const nlts = document.getElementsByClassName("nav-layer-trigger");
+let released = false;
 for (const nlt of nlts) {
   function iterateToNavLayer () {
     let test = nlt.nextElementSibling;
@@ -13,10 +14,19 @@ for (const nlt of nlts) {
     return test;
   }
   nlt.addEventListener("pointerdown", ()=> {
-    iterateToNavLayer().style.visibility = "visible";
+    released = false;
+    const timerId = setTimeout(()=> {
+      if (released === false) {
+        iterateToNavLayer().style.visibility = "visible";
+      }
+      clearTimeout(timerId);
+    }, 100);
   });
   nlt.addEventListener("pointerout", ()=> {
-    iterateToNavLayer().style.visibility = "hidden";
+    if (released === false) {
+      iterateToNavLayer().style.visibility = "hidden";
+    }
+    released = true;
   });
   
 }
