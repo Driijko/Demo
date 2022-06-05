@@ -252,7 +252,14 @@ body {
   background-color: hsla(0, 100%, 50%, 0.5);
 }
 
-@media (pointer: none) and (pointer:coarse) {
+@media (pointer: none) {
+  .nav-layer {
+    pointer-events: none;
+    background-color: hsla(220, 100%, 40%, 0.5);
+  }
+}
+
+@media (pointer: coarse) {
   .nav-layer {
     pointer-events: none;
     background-color: hsla(220, 100%, 40%, 0.5);
