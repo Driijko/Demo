@@ -1,0 +1,29 @@
+/* FONTS ///////////////////////////////// */
+html {
+  font-family: "Comfortaa", cursive;
+  font-size: 4vw;
+  /* font-size: 20px; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+/* SITE HEADER ///////////////////////////// */
+header {
+  text-align: center;
+  padding: 1rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+nav li {
+  margin-bottom: 0.7rem;
+}
+
