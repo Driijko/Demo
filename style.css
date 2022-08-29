@@ -1,7 +1,7 @@
 /* FONTS ///////////////////////////////// */
 html {
   font-family: "Comfortaa", cursive;
-  font-size: 3vw;
+  font-size: 4vw;
   /* font-size: 20px; */
 }
 
@@ -24,6 +24,6 @@ h1 {
 }
 
 nav li {
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.5rem;
 }
 
