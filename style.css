@@ -2,7 +2,6 @@
 html {
   font-family: "Comfortaa", cursive;
   font-size: 4vw;
-  /* font-size: 20px; */
 }
 
 @media only screen and (min-width: 500px) {
@@ -30,7 +29,17 @@ h1 {
 }
 
 nav li {
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  display: block;
+  width: 120px;
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
