@@ -1,12 +1,20 @@
 /* FONTS ///////////////////////////////// */
 html {
   font-family: "Comfortaa", cursive;
-  font-size: 4.7vw;
+  font-size: 4.3vw;
+  /* font-size: 20px; */
 }
 
-@media only screen and (min-width: 420px) {
+header {
+  height: 34vw
+}
+
+@media only screen and (min-width: 450px) {
   html {
     font-size: 20px;
+  }
+  header {
+    height: 150px;
   }
 }
 
@@ -18,43 +26,49 @@ h1 {
   font-size: 2rem;
 }
 
+/* ICONS ////////////////////////////// */
+.inline-icon {
+  display: inline;
+  width: 1rem;
+}
+
 /* SITE HEADER ///////////////////////////// */
 header {
   text-align: center;
-  padding: 1rem;
-  padding-bottom: 0;
+  padding-right: 3rem;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   border-bottom: 0.3rem solid black;
+  /* height: 150px; */
 }
 
 h1 {
-  margin-bottom: 0.5rem;
+  flex-shrink: 0;
 }
 
-@media only screen and (min-width: 858px) {
-  h1 {
-    margin-bottom: 2rem;
-  }
+.menu-button svg {
+  width: 2rem;
 }
 
 nav {
-  padding-bottom: 0.5rem;
-  display: flex;
-  gap: 4rem;
-  row-gap: 0.5rem;
-  flex-flow: row wrap;
-  justify-content: center;
+  display: none;
+}
+
+@media only screen and (min-width: 1045px) {
+  nav {
+    display: block;
+  }
+
+  header .menu-button {
+    display: none;
+  }
 }
 
 nav ul {
   display: flex;
   justify-content: center;
-  gap: 4rem;
-}
-
-nav a {
-  display: block;
-  height: 60px;
-  display: flex;
-  align-items: center;
+  gap: 2rem;
 }
 
